@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0645f03b-dcd1-493e-9662-677cdafdcc45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/doc/images/consigne.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qvMBzjN8LGitBULkMdv8a4Zj7X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.app.Utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc/images" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/app/Utils" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.idea" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0645f03b-dcd1-493e-9662-677cdafdcc45" name="Default Changelist" comment="" />
+      <created>1617955478584</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617955478584</updated>
+      <workItem from="1617955479798" duration="1146000" />
+      <workItem from="1617956894779" duration="501000" />
+      <workItem from="1617957422952" duration="1168000" />
+      <workItem from="1617959430295" duration="912000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="534" key="#Project_Structure" timestamp="1617958423354">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state x="0" y="534" key="#Project_Structure/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617958423354" />
+    <state x="1093" y="727" key="#com.intellij.ide.util.MemberChooser" timestamp="1617960077322">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state x="1093" y="727" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960077322" />
+    <state x="1059" y="912" width="441" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617958491528">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state x="1059" y="912" width="441" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617958491528" />
+    <state x="1500" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617959795343">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state x="1500" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617959795343" />
+    <state width="721" height="550" key="GridCell.Tab.0.bottom" timestamp="1617960372828">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state width="721" height="550" key="GridCell.Tab.0.bottom/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372828" />
+    <state width="721" height="550" key="GridCell.Tab.0.center" timestamp="1617960372827">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state width="721" height="550" key="GridCell.Tab.0.center/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372827" />
+    <state width="721" height="550" key="GridCell.Tab.0.left" timestamp="1617960372827">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state width="721" height="550" key="GridCell.Tab.0.left/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372827" />
+    <state width="721" height="550" key="GridCell.Tab.0.right" timestamp="1617960372827">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state width="721" height="550" key="GridCell.Tab.0.right/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372827" />
+    <state x="784" y="542" key="Maven.ArtifactSearchDialog" timestamp="1617959814336">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state x="784" y="542" key="Maven.ArtifactSearchDialog/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617959814336" />
+    <state x="585" y="583" width="670" height="676" key="search.everywhere.popup" timestamp="1617957969387">
+      <screen x="0" y="25" width="2560" height="1352" />
+    </state>
+    <state x="585" y="583" width="670" height="676" key="search.everywhere.popup/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617957969387" />
+  </component>
+</project>
