@@ -1,9 +1,9 @@
 package com.app.Services;
 
-import com.app.Exceptions.EntityManagerProxyException;
+import com.app.Exceptions.EntityManagerException;
 import com.app.Framework.Registery;
-import com.app.Model.Service;
-import com.app.Model.Magasin;
+import com.app.Model.Scooter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -16,40 +16,37 @@ public class Fixtures implements com.app.Framework.Service {
     private HashMap<String, ArrayList<IEntity>> map = new HashMap<>();
 
     public Fixtures() {
-        this.map.put(Magasin.class.getSimpleName(), this.getFakeMagasin());
-        this.map.put(Service.class.getSimpleName(), this.getFakeArticles());
+        // this.map.put(Magasin.class.getSimpleName(), this.getFakeMagasin());
+        this.map.put(Scooter.class.getSimpleName(), this.getFakeServices());
         load();
     }
 
     public void bootFixtures(Registery registery) throws Exception {
         ENABLE = !ENABLE;
-        EntityManagerProxy magasinManager = (EntityManagerProxy) registery.get(Magasin.class.getSimpleName());
-        EntityManagerProxy articleManager = (EntityManagerProxy) registery.get(Service.class.getSimpleName());
+        EntityManager serviceManager = (EntityManager) registery.get(Scooter.class.getSimpleName());
 
         if (ENABLE == false) {
-            managerRemoveFixtures(magasinManager);
-            managerRemoveFixtures(articleManager);
+            managerRemoveFixtures(serviceManager);
             return;
         };
 
-        managerSetFixtures(magasinManager);
-        managerSetFixtures(articleManager);
+        managerSetFixtures(serviceManager);
     }
 
-    protected void managerSetFixtures(EntityManagerProxy manager) throws Exception {
+    protected void managerSetFixtures(EntityManager manager) throws Exception {
         for (IEntity en : this.map.get(manager.getEntityClass().getSimpleName())) {
             manager.persist(en);
         }
     }
 
-    protected void managerRemoveFixtures(EntityManagerProxy manager) {
+    protected void managerRemoveFixtures(EntityManager manager) {
         try {
             manager.hqlTruncate();
-        } catch (EntityManagerProxyException exception) {
+        } catch (EntityManagerException exception) {
             exception.printStackTrace();
         }
     }
-
+    /*
     private ArrayList<IEntity> getFakeMagasin() {
         ArrayList<IEntity> arr = new ArrayList<>();
 
@@ -75,21 +72,13 @@ public class Fixtures implements com.app.Framework.Service {
 
         return arr;
     }
-
-    private ArrayList<IEntity> getFakeArticles() {
+    */
+    private ArrayList<IEntity> getFakeServices() {
         ArrayList<IEntity> arr = new ArrayList<>();
 
-        Service c1 = new Service("Huitres", (float) 10.99, 100);
-        Service c2 = new Service("Moutardes", (float) 3.49, 120);
-        Service c3 = new Service("Steak", (float) 2.99, 76);
-        Service c4 = new Service("Haricots", (float) 3.99, 29);
-        Service c5 = new Service("Melon", (float) 3.99, 40);
+        Scooter c1 = new Scooter("Trotinette", (float) 1, null);
 
         arr.add(c1);
-        arr.add(c2);
-        arr.add(c3);
-        arr.add(c4);
-        arr.add(c5);
 
         return arr;
     }

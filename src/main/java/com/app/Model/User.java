@@ -2,23 +2,29 @@ package com.app.Model;
 
 import com.app.Services.IEntity;
 
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 /**
  * Class used to reuse simple properties for
  * Client and Builders which are the two actors of the app
  */
-@MappedSuperclass
-public abstract class AbstractActor extends AbstractEntity {
-    private Long id;
+@Entity
+@Table(name = "user")
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class User extends AbstractEntity {
+    @Column(name = "name")
     private String name;
+
+    @OneToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private Scooter scooter;
 
     /**
      * Default
      */
-    public AbstractActor() {}
+    public User() {}
 
-    public AbstractActor(String name) {
+    public User(String name) {
         this.name = name;
     }
 
@@ -31,14 +37,22 @@ public abstract class AbstractActor extends AbstractEntity {
 
     @Override
     public Long getId() {
-        return id;
+        return getId();
     }
 
     @Override
     public IEntity setId(Long id) {
-        this.id = id;
+        this.setId(id);
 
         return this;
+    }
+
+    public Scooter getService() {
+        return scooter;
+    }
+
+    public void setService(Scooter scooter) {
+        this.scooter = scooter;
     }
 
     /**
@@ -48,5 +62,10 @@ public abstract class AbstractActor extends AbstractEntity {
     @Override
     public String toString() {
         return this.name;
+    }
+
+    @Override
+    public String toString(boolean list) {
+        return getId() + ", " + getName();
     }
 }

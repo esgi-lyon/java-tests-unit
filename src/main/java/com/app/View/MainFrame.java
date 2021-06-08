@@ -1,13 +1,13 @@
 package com.app.View;
 
-import com.app.Controller.MagasinController;
+import com.app.Controller.UserController;
 import com.app.Exceptions.InternalException;
 import com.app.Exceptions.NotLoadedException;
 import com.app.Services.Fixtures;
 import com.app.Services.Layout;
 import com.app.View.SwingModules.Theme;
 import com.sun.tools.javac.Main;
-import com.app.Controller.ArticleController;
+import com.app.Controller.ServiceController;
 import com.app.Framework.Registery;
 
 import javax.swing.*;
@@ -45,11 +45,11 @@ public class MainFrame extends JFrame {
         setLayout(layout.card);
         add(layout.home, "Home");
         try {
-            // Core Framework.Service creation
+            // Core Framework.Service.Java creation
             this.loadServices();
             // Controllers
-            new ArticleController(registery);
-            new MagasinController(registery);
+            new ServiceController(registery);
+            new UserController(registery);
 
         } catch (InternalException e) {
             e.printStackTrace();

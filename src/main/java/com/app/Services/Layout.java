@@ -72,7 +72,9 @@ public class Layout implements Service {
      * @param name Page name
      */
     public void openPage(JPanel jPanel, String name) {
-        this.addPage(jPanel, name, null);
+        if (jPanel != null) {
+            this.addPage(jPanel, name, null);
+        }
         this.card.show(mainFrame.getContentPane(), name);
     }
 

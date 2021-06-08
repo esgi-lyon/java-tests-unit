@@ -1,6 +1,6 @@
 package com.app.Services;
 
-import com.app.Exceptions.EntityManagerProxyException;
+import com.app.Exceptions.EntityManagerException;
 import com.app.Framework.Service;
 import com.app.Utils.SessionUtils;
 import org.hibernate.Session;
@@ -13,7 +13,7 @@ import java.util.List;
  * TODO : create a connectors classes caller to keep this in a state of singleton
  * @author loic-roux-404
  */
-public class EntityManagerProxy extends SessionUtils implements Service {
+public class EntityManager extends SessionUtils implements Service {
 
     boolean loaded = false;
 
@@ -26,7 +26,7 @@ public class EntityManagerProxy extends SessionUtils implements Service {
      *
      * @param entityClass EntityClass reflection information
      */
-    public EntityManagerProxy(Class entityClass) {
+    public EntityManager(Class entityClass) {
         this.entityClass = entityClass;
         session = getSession();
         load();
@@ -36,10 +36,10 @@ public class EntityManagerProxy extends SessionUtils implements Service {
      * [Save Method] ACID custom persist
      *
      * @param en IEntity instance
-     * @throws EntityManagerProxyException Internal entity manager proxy exception
+     * @throws EntityManagerException Internal entity manager proxy exception
      */
     @Transactional
-    public final void persist(IEntity en) throws EntityManagerProxyException {
+    public final void persist(IEntity en) throws EntityManagerException {
         try {
             startOperation();
             session.saveOrUpdate(en);
@@ -47,7 +47,7 @@ public class EntityManagerProxy extends SessionUtils implements Service {
             tx.commit();
         } catch (Exception e) {
             rollback(tx);
-            throw new EntityManagerProxyException(e);
+            throw new EntityManagerException(e);
         } finally {
             close(session);
         }
@@ -57,9 +57,9 @@ public class EntityManagerProxy extends SessionUtils implements Service {
      * [Delete Method] Delete an entity
      *
      * @param en
-     * @throws EntityManagerProxyException Internal entity manager proxy exception
+     * @throws EntityManagerException Internal entity manager proxy exception
      */
-    public final void delete(IEntity en) throws EntityManagerProxyException {
+    public final void delete(IEntity en) throws EntityManagerException {
         try {
             startOperation();
             session.delete(en);
@@ -67,7 +67,7 @@ public class EntityManagerProxy extends SessionUtils implements Service {
             tx.commit();
         } catch (Exception e) {
             rollback(tx);
-            throw new EntityManagerProxyException(e);
+            throw new EntityManagerException(e);
         } finally {
             close(session);
         }
@@ -76,9 +76,9 @@ public class EntityManagerProxy extends SessionUtils implements Service {
     /**
      * [Delete Method] Empty a table
      *
-     * @throws EntityManagerProxyException Internal exception
+     * @throws EntityManagerException Internal exception
      */
-    public final void hqlTruncate() throws EntityManagerProxyException {
+    public final void hqlTruncate() throws EntityManagerException {
         startOperation();
         String hql = String.format("delete from %s", entityClass.getSimpleName());
 
@@ -88,7 +88,7 @@ public class EntityManagerProxy extends SessionUtils implements Service {
             tx.commit();
         } catch (Exception exception) {
             rollback(tx);
-            throw new EntityManagerProxyException(exception);
+            throw new EntityManagerException(exception);
         } finally {
             close(session);
         }
@@ -97,17 +97,17 @@ public class EntityManagerProxy extends SessionUtils implements Service {
     /**
      * [Read method] Get all from entity
      *
-     * @throws EntityManagerProxyException Internal exception
+     * @throws EntityManagerException Internal exception
      * @return List of entity concerned by this en manager proxy instance
      */
-    public final List<IEntity> getAll() throws EntityManagerProxyException {
+    public final List<IEntity> getAll() throws EntityManagerException {
         List<IEntity> entities;
         session = getSession();
 
         try {
             entities = session.createQuery("from " + entityClass.getSimpleName()).list();
         } catch (Exception e) {
-            throw new EntityManagerProxyException(e);
+            throw new EntityManagerException(e);
         } finally {
             close(session);
         }
@@ -120,15 +120,15 @@ public class EntityManagerProxy extends SessionUtils implements Service {
      *
      * @param id Identifier
      * @return IEntity The entity requested
-     * @throws EntityManagerProxyException Internal exception
+     * @throws EntityManagerException Internal exception
      */
-    public final IEntity getById(Long id) throws EntityManagerProxyException {
+    public final IEntity getById(Long id) throws EntityManagerException {
         Object obj;
         try {
             session = getSession();
             obj = session.load(entityClass, id);
         } catch (Exception e) {
-            throw new EntityManagerProxyException(e);
+            throw new EntityManagerException(e);
         }
 
         return (IEntity) obj;

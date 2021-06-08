@@ -2,7 +2,7 @@ package com.app.Controller;
 
 import com.app.Exceptions.RegisteryException;
 import com.app.Framework.Service;
-import com.app.Services.EntityManagerProxy;
+import com.app.Services.EntityManager;
 import com.app.Services.Layout;
 import com.app.View.SwingModules.PageBtn;
 import com.app.Exceptions.FormException;
@@ -26,13 +26,13 @@ public abstract class AbstractController {
         setRegistery(registery);
     }
 
-    public EntityManagerProxy getEntityManagerProxy(Class entityClass) throws RegisteryException {
+    public EntityManager getEntityManagerProxy(Class entityClass) throws RegisteryException {
         // Init first services
         String name = entityClass.getSimpleName();
-        return (EntityManagerProxy) (this.registery.has(name)
+        return (EntityManager) (this.registery.has(name)
             ? getService(name)
             : this.registery
-                .add(name, new EntityManagerProxy(entityClass))
+                .add(name, new EntityManager(entityClass))
                 .get(name))
             ;
     }

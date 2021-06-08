@@ -1,6 +1,7 @@
 package com.app.View.SwingModules;
 
 import com.app.Exceptions.FormException;
+import com.app.Services.Layout;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +22,7 @@ public class FormBuilder implements Form {
     // Basic form buttons
     private JButton listButton = new JButton("Liste");
     private JButton submitButton = new JButton("Ajouter");
-    private BackButton backButton = new BackButton();
+    private BackButton backButton;
     // space between fields
     Insets fieldsInset = new Insets(0, 0, 10, 0);
     // space between buttons
@@ -199,8 +200,8 @@ public class FormBuilder implements Form {
         return this;
     }
 
-    public FormBuilder disableBackBtn() {
-        backButton = null;
+    public FormBuilder enableBackButton(Layout ly, String page) {
+        backButton = new BackButton(ly, page);
 
         return this;
     }

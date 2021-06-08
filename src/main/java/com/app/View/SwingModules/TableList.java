@@ -1,6 +1,7 @@
 package com.app.View.SwingModules;
 
 import com.app.Services.IEntity;
+import com.app.Services.Layout;
 
 import javax.swing.*;
 import javax.swing.event.TableModelListener;
@@ -19,10 +20,11 @@ public class TableList extends JPanel implements BuilderInterface {
     private String[] tableColumn = {};
 
     // buttons
-    public BackButton backButton = new BackButton();
+    public BackButton backButton;
     JButton delete = new JButton("Supprimer");
 
-    public TableList(String[] tableColumn) {
+    public TableList(String[] tableColumn, Layout ly, String page) {
+        backButton = new BackButton(ly, page);
         add(backButton.getToolBar());
         this.tableColumn = tableColumn;
         // uses box layout

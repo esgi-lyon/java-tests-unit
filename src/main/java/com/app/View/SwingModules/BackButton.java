@@ -1,8 +1,12 @@
 package com.app.View.SwingModules;
 
+import com.app.Services.Layout;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Callable;
+import java.util.function.Function;
 
 public class BackButton {
 
@@ -10,7 +14,7 @@ public class BackButton {
     // back button
     protected JButton btn;
 
-    public BackButton() {
+    public BackButton(Layout ly, String page) {
         toolBar = new JToolBar("toolBar", JToolBar.VERTICAL);
         toolBar.setFloatable(false);
         toolBar.setOrientation(JToolBar.HORIZONTAL);
@@ -19,6 +23,14 @@ public class BackButton {
         btn = new JButton("Retour");
         toolBar.setMaximumSize(new Dimension(Integer.MAX_VALUE, toolBar.getMinimumSize().height));
         toolBar.add(btn);
+
+        this.onClick(e -> {
+            if (page != null) {
+                ly.openPage(null, page);
+            } else {
+                ly.openHome();
+            }
+        });
     }
 
     public JToolBar getToolBar() {
