@@ -1,19 +1,20 @@
-package com.app.Controller;
+package com.events.Controller;
 
+import com.events.Model.ClassicUser;
+import com.events.Model.Student;
+import com.events.Model.User;
+import com.events.View.Home;
+import com.events.View.UserView;
+import com.framework.Controller.AbstractController;
 import com.framework.Exception.EntityManagerException;
 import com.framework.Exception.FormException;
 import com.framework.Exception.InternalException;
 import com.framework.Exception.RegisteryException;
-import com.framework.Controller.AbstractController;
 import com.framework.Registery;
-import com.app.Model.ClassicUser;
-import com.app.Model.Student;
-import com.app.Model.User;
 import com.framework.Services.EntityManager;
 import com.framework.Services.IEntity;
 import com.framework.Services.Layout;
-import com.app.View.Home;
-import com.app.View.UserView;
+
 import java.util.List;
 
 public class UserController extends AbstractController {

@@ -14,43 +14,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0645f03b-dcd1-493e-9662-677cdafdcc45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cli/Fixtures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Controller/AbstractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Controller/ScooterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/ClassicUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/Dated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/Scooter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Utils/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Utils/SessionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/Utils/StrUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/View/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/View/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/View/MenuBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/View/ScooterView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/events/View/UserView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/ScooterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Controller/ScooterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/EntityManagerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/EntityManagerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/FormException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/FormException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/InternalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/InternalException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/InvalidPageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/InvalidPageException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/NotLoadedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/NotLoadedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/PhoneNumberDigitsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Exception/PhoneNumberDigitsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/RegisteryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/RegisteryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Registery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Registery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/ResourceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/EntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/Fixtures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/Fixtures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/IEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/IEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/Layout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Model/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/Scooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Model/Scooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/MenuBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/ScooterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/ScooterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/BackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/BackButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/BuilderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/BuilderInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/FormBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/FormBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/JDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/JDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/LabelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/LabelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/NumberField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/NumberField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/PageBtn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/PageBtn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/TableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/TableList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/Theme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/Theme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/UserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exception/PhoneNumberDigitsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Controller/AbstractController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +67,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/events" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,6 +82,10 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.app.Utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/events" />
+      <recent name="$PROJECT_DIR$/src/main/java/com" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.app.View" />
@@ -135,7 +122,7 @@
       <workItem from="1617957422952" duration="1168000" />
       <workItem from="1617959430295" duration="912000" />
       <workItem from="1623132172293" duration="13546000" />
-      <workItem from="1623179324570" duration="17970000" />
+      <workItem from="1623179324570" duration="18353000" />
     </task>
     <servers />
   </component>
