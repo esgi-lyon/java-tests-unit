@@ -14,25 +14,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0645f03b-dcd1-493e-9662-677cdafdcc45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cli/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cli/Fixtures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Controller/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Controller/ScooterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Controller/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/ScooterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Controller/ScooterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Model/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/EntityManagerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/EntityManagerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/FormException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/FormException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/InternalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/InternalException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/InvalidPageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/InvalidPageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/NotLoadedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/NotLoadedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/PhoneNumberDigitsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Exception/PhoneNumberDigitsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Exceptions/RegisteryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Exception/RegisteryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Registery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Registery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/ResourceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/EntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/Fixtures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/Fixtures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/IEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/IEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Services/Layout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/Model/AbstractEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/Scooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Model/Scooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Services/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/EntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Services/Fixtures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/Fixtures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Services/IEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/IEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Services/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Framework/Services/Layout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/MenuBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/ServiceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/ScooterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/BackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/BackButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/FormBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/FormBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/TableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/TableList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/ScooterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/ScooterView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/BackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/BackButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/BuilderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/BuilderInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/FormBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/FormBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/JDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/JDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/LabelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/LabelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/NumberField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/NumberField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/PageBtn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/PageBtn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/TableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/TableList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/SwingModules/Theme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/SwingModules/Theme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/View/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/View/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,11 +104,11 @@
       <recent name="com.app.View" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/doc/images" />
       <recent name="$PROJECT_DIR$/doc" />
       <recent name="$PROJECT_DIR$/src/main/java/com/app/Utils" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/.idea" />
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.package-run">
@@ -118,7 +135,7 @@
       <workItem from="1617957422952" duration="1168000" />
       <workItem from="1617959430295" duration="912000" />
       <workItem from="1623132172293" duration="13546000" />
-      <workItem from="1623179324570" duration="17161000" />
+      <workItem from="1623179324570" duration="17970000" />
     </task>
     <servers />
   </component>
@@ -164,9 +181,10 @@
     <state x="1093" y="760" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.820/0.25.2560.1415@0.25.2560.1415" timestamp="1623134629734" />
     <state x="1093" y="760" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.821/0.25.2560.1415@0.25.2560.1415" timestamp="1623142699225" />
     <state x="1093" y="727" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960077322" />
-    <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623241066944">
+    <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623242977578">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
+    <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623242977578" />
     <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623241066944" />
     <state x="1059" y="912" width="441" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617958491528">
       <screen x="0" y="25" width="2560" height="1352" />
@@ -184,7 +202,7 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="1018" y="837" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/572.1465.1440.821/0.25.2560.1415@0.25.2560.1415" timestamp="1623137176095" />
-    <state width="669" height="382" key="GridCell.Tab.0.bottom" timestamp="1623241336847">
+    <state width="669" height="582" key="GridCell.Tab.0.bottom" timestamp="1623242997005">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="396" height="688" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1623233331007" />
@@ -192,8 +210,8 @@
     <state width="396" height="689" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1623193696439" />
     <state width="396" height="453" key="GridCell.Tab.0.bottom/0.25.1440.818@0.25.1440.818" timestamp="1623192709397" />
     <state width="669" height="382" key="GridCell.Tab.0.bottom/572.1465.1440.813/0.25.2560.1415@0.25.2560.1415" timestamp="1623235639956" />
-    <state width="669" height="382" key="GridCell.Tab.0.bottom/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623240194465" />
-    <state width="669" height="382" key="GridCell.Tab.0.bottom/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623241086578" />
+    <state width="669" height="582" key="GridCell.Tab.0.bottom/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623242997005" />
+    <state width="669" height="582" key="GridCell.Tab.0.bottom/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623242903531" />
     <state width="669" height="382" key="GridCell.Tab.0.bottom/572.1465.1440.817/0.25.2560.1415@0.25.2560.1415" timestamp="1623241336847" />
     <state width="669" height="382" key="GridCell.Tab.0.bottom/572.1465.1440.818/0.25.2560.1415@0.25.2560.1415" timestamp="1623241321960" />
     <state width="1025" height="381" key="GridCell.Tab.0.bottom/572.1465.1440.819/0.25.2560.1415@0.25.2560.1415" timestamp="1623183502954" />
@@ -201,7 +219,7 @@
     <state width="960" height="381" key="GridCell.Tab.0.bottom/572.1465.1440.821/0.25.2560.1415@0.25.2560.1415" timestamp="1623145490526" />
     <state width="961" height="582" key="GridCell.Tab.0.bottom/572.1465.1440.822/0.25.2560.1415@0.25.2560.1415" timestamp="1623137296427" />
     <state width="721" height="550" key="GridCell.Tab.0.bottom/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372828" />
-    <state width="669" height="382" key="GridCell.Tab.0.center" timestamp="1623241336844">
+    <state width="669" height="582" key="GridCell.Tab.0.center" timestamp="1623242997004">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="396" height="688" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1623233331005" />
@@ -209,8 +227,8 @@
     <state width="396" height="689" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1623193696437" />
     <state width="396" height="453" key="GridCell.Tab.0.center/0.25.1440.818@0.25.1440.818" timestamp="1623192709396" />
     <state width="669" height="382" key="GridCell.Tab.0.center/572.1465.1440.813/0.25.2560.1415@0.25.2560.1415" timestamp="1623235639955" />
-    <state width="669" height="382" key="GridCell.Tab.0.center/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623240194464" />
-    <state width="669" height="382" key="GridCell.Tab.0.center/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623241086577" />
+    <state width="669" height="582" key="GridCell.Tab.0.center/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623242997004" />
+    <state width="669" height="582" key="GridCell.Tab.0.center/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623242903530" />
     <state width="669" height="382" key="GridCell.Tab.0.center/572.1465.1440.817/0.25.2560.1415@0.25.2560.1415" timestamp="1623241336844" />
     <state width="669" height="382" key="GridCell.Tab.0.center/572.1465.1440.818/0.25.2560.1415@0.25.2560.1415" timestamp="1623241321959" />
     <state width="1025" height="381" key="GridCell.Tab.0.center/572.1465.1440.819/0.25.2560.1415@0.25.2560.1415" timestamp="1623183502953" />
@@ -218,7 +236,7 @@
     <state width="960" height="381" key="GridCell.Tab.0.center/572.1465.1440.821/0.25.2560.1415@0.25.2560.1415" timestamp="1623145490526" />
     <state width="961" height="582" key="GridCell.Tab.0.center/572.1465.1440.822/0.25.2560.1415@0.25.2560.1415" timestamp="1623137296426" />
     <state width="721" height="550" key="GridCell.Tab.0.center/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372827" />
-    <state width="669" height="382" key="GridCell.Tab.0.left" timestamp="1623241336844">
+    <state width="669" height="582" key="GridCell.Tab.0.left" timestamp="1623242997004">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="396" height="688" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1623233331004" />
@@ -226,8 +244,8 @@
     <state width="396" height="689" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1623193696436" />
     <state width="396" height="453" key="GridCell.Tab.0.left/0.25.1440.818@0.25.1440.818" timestamp="1623192709396" />
     <state width="669" height="382" key="GridCell.Tab.0.left/572.1465.1440.813/0.25.2560.1415@0.25.2560.1415" timestamp="1623235639954" />
-    <state width="669" height="382" key="GridCell.Tab.0.left/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623240194463" />
-    <state width="669" height="382" key="GridCell.Tab.0.left/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623241086577" />
+    <state width="669" height="582" key="GridCell.Tab.0.left/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623242997004" />
+    <state width="669" height="582" key="GridCell.Tab.0.left/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623242903529" />
     <state width="669" height="382" key="GridCell.Tab.0.left/572.1465.1440.817/0.25.2560.1415@0.25.2560.1415" timestamp="1623241336844" />
     <state width="669" height="382" key="GridCell.Tab.0.left/572.1465.1440.818/0.25.2560.1415@0.25.2560.1415" timestamp="1623241321959" />
     <state width="1025" height="381" key="GridCell.Tab.0.left/572.1465.1440.819/0.25.2560.1415@0.25.2560.1415" timestamp="1623183502952" />
@@ -235,7 +253,7 @@
     <state width="960" height="381" key="GridCell.Tab.0.left/572.1465.1440.821/0.25.2560.1415@0.25.2560.1415" timestamp="1623145490525" />
     <state width="961" height="582" key="GridCell.Tab.0.left/572.1465.1440.822/0.25.2560.1415@0.25.2560.1415" timestamp="1623137296426" />
     <state width="721" height="550" key="GridCell.Tab.0.left/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960372827" />
-    <state width="669" height="382" key="GridCell.Tab.0.right" timestamp="1623241336847">
+    <state width="669" height="582" key="GridCell.Tab.0.right" timestamp="1623242997004">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="396" height="688" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1623233331005" />
@@ -243,8 +261,8 @@
     <state width="396" height="689" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1623193696438" />
     <state width="396" height="453" key="GridCell.Tab.0.right/0.25.1440.818@0.25.1440.818" timestamp="1623192709397" />
     <state width="669" height="382" key="GridCell.Tab.0.right/572.1465.1440.813/0.25.2560.1415@0.25.2560.1415" timestamp="1623235639955" />
-    <state width="669" height="382" key="GridCell.Tab.0.right/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623240194464" />
-    <state width="669" height="382" key="GridCell.Tab.0.right/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623241086578" />
+    <state width="669" height="582" key="GridCell.Tab.0.right/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623242997004" />
+    <state width="669" height="582" key="GridCell.Tab.0.right/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623242903531" />
     <state width="669" height="382" key="GridCell.Tab.0.right/572.1465.1440.817/0.25.2560.1415@0.25.2560.1415" timestamp="1623241336847" />
     <state width="669" height="382" key="GridCell.Tab.0.right/572.1465.1440.818/0.25.2560.1415@0.25.2560.1415" timestamp="1623241321960" />
     <state width="1025" height="381" key="GridCell.Tab.0.right/572.1465.1440.819/0.25.2560.1415@0.25.2560.1415" timestamp="1623183502953" />

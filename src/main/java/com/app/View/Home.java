@@ -5,8 +5,8 @@ import java.util.HashMap;
 
 import com.app.Controller.ScooterController;
 import com.app.Controller.UserController;
-import com.app.View.SwingModules.FormBuilder;
-import com.app.View.SwingModules.PageBtn;
+import com.framework.SwingModules.FormBuilder;
+import com.framework.SwingModules.PageBtn;
 
 /**
  * class Home

@@ -1,14 +1,14 @@
 package com.app.View;
 
 import com.app.Controller.UserController;
-import com.app.Exceptions.InternalException;
-import com.app.Exceptions.NotLoadedException;
-import com.app.Framework.Services.Fixtures;
-import com.app.Framework.Services.Layout;
-import com.app.View.SwingModules.Theme;
+import com.framework.Exception.InternalException;
+import com.framework.Exception.NotLoadedException;
+import com.framework.Services.Fixtures;
+import com.framework.Services.Layout;
+import com.framework.SwingModules.Theme;
 import com.sun.tools.javac.Main;
 import com.app.Controller.ScooterController;
-import com.app.Framework.Registery;
+import com.framework.Registery;
 
 import javax.swing.*;
 import java.awt.*;

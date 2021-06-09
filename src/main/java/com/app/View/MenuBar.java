@@ -1,9 +1,9 @@
 package com.app.View;
 
-import com.app.View.SwingModules.LabelBuilder;
-import com.app.Framework.Services.Fixtures;
-import com.app.View.SwingModules.FormBuilder;
-import com.app.View.SwingModules.Theme;
+import com.framework.SwingModules.LabelBuilder;
+import com.framework.Services.Fixtures;
+import com.framework.SwingModules.FormBuilder;
+import com.framework.SwingModules.Theme;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,9 +1,9 @@
 package com.app.View;
 
-import com.app.Framework.Services.Layout;
-import com.app.View.SwingModules.Form;
-import com.app.View.SwingModules.FormBuilder;
-import com.app.View.SwingModules.TableList;
+import com.framework.Services.Layout;
+import com.framework.SwingModules.Form;
+import com.framework.SwingModules.FormBuilder;
+import com.framework.SwingModules.TableList;
 
 import javax.swing.*;
 

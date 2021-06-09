@@ -1,5 +1,7 @@
 package com.app.Model;
 
+import com.framework.Model.AbstractEntity;
+
 import javax.persistence.*;
 
 @Entity

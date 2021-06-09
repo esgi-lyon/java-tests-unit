@@ -1,6 +1,6 @@
 package com.app.Model;
 
-import com.app.Framework.Services.IEntity;
+import com.framework.Model.AbstractEntity;
 
 import javax.persistence.*;
 
