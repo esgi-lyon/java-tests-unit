@@ -1,6 +1,6 @@
 package com.events.View;
 
-import com.events.Controller.ScooterController;
+import com.events.Controller.MusicalEventController;
 import com.events.Controller.UserController;
 import com.framework.SwingModules.FormBuilder;
 import com.framework.SwingModules.PageBtn;
@@ -25,9 +25,9 @@ public class Home extends JPanel {
     public final static String USERS_LIST = "Users_list";
 
     public Home() {
-        this.addPageBtn(ScooterController.TITLE_ADD, SERVICES_ADD);
-        this.addPageBtn(ScooterController.TITLE_TERMINATE, SERVICES_TERMINATE);
-        this.addPageBtn(ScooterController.TITLE_TRACKING, SERVICES_LIST);
+        this.addPageBtn(MusicalEventController.TITLE_ADD, SERVICES_ADD);
+        this.addPageBtn(MusicalEventController.TITLE_TERMINATE, SERVICES_TERMINATE);
+        this.addPageBtn(MusicalEventController.TITLE_TRACKING, SERVICES_LIST);
         this.addPageBtn(UserController.TITLE_LIST, USERS_LIST);
         this.addPageBtn(UserController.TITLE_ADD, USERS_ADD);
 

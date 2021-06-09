@@ -1,6 +1,6 @@
 package com.events.View;
 
-import com.events.Controller.ScooterController;
+import com.events.Controller.MusicalEventController;
 import com.events.Controller.UserController;
 import com.framework.Exception.InternalException;
 import com.framework.Exception.NotLoadedException;
@@ -47,7 +47,7 @@ public class MainFrame extends JFrame {
             // Core Framework.Service.Java creation
             this.loadServices();
             // Controllers
-            new ScooterController(registery);
+            new MusicalEventController(registery);
             new UserController(registery);
 
         } catch (InternalException e) {

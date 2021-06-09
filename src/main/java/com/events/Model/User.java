@@ -17,7 +17,7 @@ public abstract class User extends AbstractEntity {
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private Scooter scooter;
+    private MusicalEvent musicalEvent;
 
     /**
      * Default
@@ -35,12 +35,12 @@ public abstract class User extends AbstractEntity {
         this.name = name;
     }
 
-    public Scooter getService() {
-        return scooter;
+    public MusicalEvent getService() {
+        return musicalEvent;
     }
 
-    public void setService(Scooter scooter) {
-        this.scooter = scooter;
+    public void setService(MusicalEvent musicalEvent) {
+        this.musicalEvent = musicalEvent;
     }
 
     /**

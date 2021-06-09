@@ -10,11 +10,11 @@ import com.framework.SwingModules.TableList;
 import javax.swing.*;
 import java.util.List;
 
-public class ScooterView {
+public class MusicalEventView {
     static String[] tableColumn = {"Référence", "Nom", "PrixHT", "PrixTTC", "Quantitée"};
 
     public String intitule = "Trotinette";
-    public double prixPerMinutes = 2.00;
+    public double basePrice = 2.00;
     
     public JComboBox user = new JComboBox();
 
@@ -23,7 +23,7 @@ public class ScooterView {
     public Form serviceAdd;
     public Form serviceTerminate;
 
-    public ScooterView(Layout ly) throws InternalException {
+    public MusicalEventView(Layout ly) {
         productTableList = new TableList(tableColumn, ly, null);
         serviceAdd = this.startForm(ly);
         serviceTerminate = this.terminateForm(ly);

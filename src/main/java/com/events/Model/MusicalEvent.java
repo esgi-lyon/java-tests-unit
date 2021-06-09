@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Service")
-public class Scooter extends AbstractEntity {
+public class MusicalEvent extends AbstractEntity {
 
     public enum Status {
         failed, processing, done
@@ -24,9 +24,9 @@ public class Scooter extends AbstractEntity {
     @OneToOne(mappedBy = "scooter")
     User user;
 
-    public Scooter() {}
+    public MusicalEvent() {}
 
-    public Scooter(String intitule, float prix) {
+    public MusicalEvent(String intitule, float prix) {
     	this.intitule = intitule;
     	this.prix = prix;
     	this.status = Status.processing;
@@ -68,7 +68,7 @@ public class Scooter extends AbstractEntity {
     	return prix;
     }
 
-    public Scooter process(User user) {
+    public MusicalEvent process(User user) {
         this.setUser(user);
         this.setStatus(Status.processing);
 
