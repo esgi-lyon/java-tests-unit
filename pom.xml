@@ -10,7 +10,7 @@
     <name>Java app</name>
 
     <properties>
-        <project.build.mainClass>com.app.Main</project.build.mainClass>
+        <project.build.mainClass>com.events.Main</project.build.mainClass>
         <java.version>13</java.version>
     </properties>
 

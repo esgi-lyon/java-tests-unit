@@ -1,4 +1,4 @@
-package com.cli;
+package com.events.cli;
 
 public class ConsoleServiceEvent {
 }

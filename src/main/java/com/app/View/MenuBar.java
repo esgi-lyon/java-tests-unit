@@ -3,6 +3,7 @@ package com.app.View;
 import com.framework.SwingModules.LabelBuilder;
 import com.framework.Services.Fixtures;
 import com.framework.SwingModules.FormBuilder;
+import com.framework.SwingModules.MenuBarInterface;
 import com.framework.SwingModules.Theme;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ import java.awt.event.KeyEvent;
 /**
  * MenuBar class.
  */
-public class MenuBar extends JMenuBar {
+public class MenuBar extends JMenuBar implements MenuBarInterface {
     // file :
     JMenu jMenuFile = new JMenu("Menu");
 
@@ -68,7 +69,7 @@ public class MenuBar extends JMenuBar {
         jMenuItemAbout.addActionListener(listener);
     }
 
-    protected void handleAbout(JFrame frame) {
+    public void handleAbout(JFrame frame) {
         FormBuilder about = (new FormBuilder(false))
             .disableAllBtn()
             .addField(
@@ -94,7 +95,7 @@ public class MenuBar extends JMenuBar {
         jMenuItemShortcuts.addActionListener(listener);
     }
 
-    protected void handleHelp(JFrame frame) {
+    public void handleHelp(JFrame frame) {
         FormBuilder about = (new FormBuilder(false))
             .disableAllBtn()
             .addField("shortcuts", (new LabelBuilder("Raccourcis claviers")).buildTitle())
@@ -108,5 +109,15 @@ public class MenuBar extends JMenuBar {
             JOptionPane.PLAIN_MESSAGE,
             null
         );
+    }
+
+    @Override
+    public JMenuItem getjMenuItemQuit() {
+        return jMenuItemQuit;
+    }
+
+    @Override
+    public JMenuItem getjMenuItemHome() {
+        return jMenuItemHome;
     }
 }

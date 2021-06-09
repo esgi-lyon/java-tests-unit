@@ -9,7 +9,6 @@ import com.framework.Services.Fixtures;
 import com.framework.Services.Layout;
 import com.framework.SwingModules.Theme;
 import com.sun.tools.javac.Main;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -19,7 +18,7 @@ import java.util.ArrayList;
 public class MainFrame extends JFrame {
 
     // Card layout for switching view
-    public Layout layout = new Layout(this);
+    public Layout layout = new Layout(this, new MenuBar());
 
     public Registery registery;
     // viewRegisery
@@ -83,14 +82,14 @@ public class MainFrame extends JFrame {
 
     protected void createMenu() {
 
-        setJMenuBar(layout.menuBar);
+        setJMenuBar((JMenuBar) layout.menuBar);
 
         // menu listeners :
-        layout.menuBar.jMenuItemQuit.addActionListener((ActionEvent ev) -> {
+        layout.menuBar.getjMenuItemQuit().addActionListener((ActionEvent ev) -> {
             if (confirmBeforeExit()) System.exit(0);
         });
 
-        layout.menuBar.jMenuItemHome.addActionListener((ActionEvent ev) -> {
+        layout.menuBar.getjMenuItemHome().addActionListener((ActionEvent ev) -> {
             layout.openHome();
         });
 

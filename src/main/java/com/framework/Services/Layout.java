@@ -2,11 +2,9 @@ package com.framework.Services;
 
 import com.framework.Service;
 import com.app.View.Home;
+import com.framework.SwingModules.MenuBarInterface;
 import com.framework.SwingModules.Theme;
-import com.app.View.MainFrame;
-import com.app.View.MenuBar;
 import com.framework.SwingModules.PageBtn;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
@@ -24,14 +22,15 @@ public class Layout implements Service {
     // Main components
     public CardLayout card = new CardLayout();
     public Home home = new Home();
-    public MenuBar menuBar = new MenuBar();
-    public MainFrame mainFrame;
+    public MenuBarInterface menuBar;
+    public JFrame mainFrame;
 
     // views map
     public HashMap<String, JPanel> views = new HashMap<>();
 
-    public Layout(MainFrame mainFrame) {
+    public Layout(JFrame mainFrame, MenuBarInterface menuBar) {
         this.mainFrame = mainFrame;
+        this.menuBar = menuBar;
         this.load();
     }
 
