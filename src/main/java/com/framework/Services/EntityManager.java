@@ -6,6 +6,7 @@ import com.app.Utils.SessionUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import javax.transaction.Transactional;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -127,6 +128,18 @@ public class EntityManager extends SessionUtils implements Service {
         try {
             session = getSession();
             obj = session.load(entityClass, id);
+        } catch (Exception e) {
+            throw new EntityManagerException(e);
+        }
+
+        return (IEntity) obj;
+    }
+
+    public final IEntity getByField(String field, String v) throws EntityManagerException {
+        Object obj;
+        try {
+            session = getSession();
+            obj = session.createQuery(String.format("from %s where %s=%s", entityClass.getSimpleName(), field, v)).list();
         } catch (Exception e) {
             throw new EntityManagerException(e);
         }

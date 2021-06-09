@@ -3,13 +3,14 @@ package com.events.Model;
 import com.framework.Model.AbstractEntity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "Service")
 public class MusicalEvent extends AbstractEntity {
 
     public enum Status {
-        failed, processing, done
+        failed, planned, processing, done
     }
 
     @Column(name = "intitule")
@@ -21,8 +22,8 @@ public class MusicalEvent extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     Status status;
 
-    @OneToOne(mappedBy = "scooter")
-    User user;
+    @OneToMany(mappedBy = "musicalEvent")
+    Set<User> users;
 
     public final double basePrice = 100.00;
 
@@ -54,27 +55,20 @@ public class MusicalEvent extends AbstractEntity {
         return prix;
     }
 
-    public void setPrix(float prixHT) {
-        this.prix = prixHT;
+    public void setPrix(float price) {
+        prix = price;
     }
 
-    public User getUser() {
-        return user;
+    public Set<User> getUsers() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUsers(Set<User> user) {
+        this.users = user;
     }
 
-    public float prixHT() {
-    	return prix;
-    }
-
-    public MusicalEvent process(User user) {
-        this.setUser(user);
-        this.setStatus(Status.processing);
-
-        return this;
+    public void addUser(User user) {
+        this.users.add(user);
     }
 
     @Override

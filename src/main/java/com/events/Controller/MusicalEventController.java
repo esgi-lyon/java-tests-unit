@@ -75,8 +75,8 @@ public class MusicalEventController extends AbstractController {
             try {
                 musicalEventView.serviceTerminate.validate();
                 User user = (User) musicalEventView.user.getSelectedItem();
-                MusicalEvent musicalEvent = (MusicalEvent) this.articleEntityManager.getById(user.getService().getId());
-                musicalEvent.setUser(null);
+                MusicalEvent musicalEvent = (MusicalEvent) this.articleEntityManager.getById(user.getMusicalEvent().getId());
+                musicalEvent.setUsers(null);
                 musicalEvent.setStatus(MusicalEvent.Status.done);
                 musicalEventView.serviceAdd.reset(true);
             } catch (FormException formException) {
@@ -98,7 +98,7 @@ public class MusicalEventController extends AbstractController {
                 User user = (User) musicalEventView.user.getSelectedItem();
                 MusicalEvent musicalEvent = new MusicalEvent(musicalEventView.intitule);
                 this.articleEntityManager.persist(musicalEvent);
-                musicalEvent.setUser(user);
+                musicalEvent.addUser(user);
                 musicalEventView.serviceAdd.reset(true);
             } catch (FormException formException) {
                 musicalEventView.serviceAdd.errorDialog(formException.getMessage());

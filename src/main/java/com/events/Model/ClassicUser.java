@@ -10,5 +10,15 @@ public class ClassicUser extends User {
         super(name);
     }
 
+    @Override
+    public void buyEventTicket(MusicalEvent event) {
+        event.addUser(this);
+
+    }
+
     public ClassicUser() {}
+
+    public void buyEventTicket() {
+        this.getMusicalEvent().addUser(this);
+    }
 }
