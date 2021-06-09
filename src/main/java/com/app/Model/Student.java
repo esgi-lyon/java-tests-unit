@@ -18,13 +18,14 @@ public class Student extends User {
     public void buyEventTicket(MusicalEvent event) {
         this.eventCount += 1;
 
-        if (eventCount == 20) {
+        if (eventCount >= 20) {
             event.setPrix(0);
             eventCount = 0;
         } else {
             event.setPrix(event.getPrix() * (float) 0.7);
         }
 
+        event.addUser(this);
         this.setService(event);
     }
 

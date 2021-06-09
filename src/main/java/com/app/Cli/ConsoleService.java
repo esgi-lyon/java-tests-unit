@@ -27,7 +27,11 @@ public class ConsoleService {
         argMap = this.parseArgs(args);
         this.userName = argMap.get("name");
         this.eventName = argMap.get("event");
+        System.out.println(this.userName);
+        this.userBuyEventAction();
+    }
 
+    void userBuyEventAction() throws EntityManagerException {
         final User user = this.fetchUser();
         final MusicalEvent event = this.fetchEvent();
 
@@ -37,20 +41,20 @@ public class ConsoleService {
         if (user instanceof ClassicUser) {
             this.enClassicUser.persist(user);
         } else if (user instanceof Student) {
-            this.enStudent.persist((user));
+            this.enStudent.persist(user);
         }
 
         System.out.println(
-            String.format(
-                "Successfully added event %s to user %s for the price of %s",
-                user.getMusicalEvent().getIntitule(),
-                user.getName(),
-                user.getMusicalEvent().getPrix()
-            )
+                String.format(
+                        "Successfully added event %s to user %s for the price of %s",
+                        user.getMusicalEvent().getIntitule(),
+                        user.getName(),
+                        user.getMusicalEvent().getPrix()
+                )
         );
     }
 
-    User fetchUser() {
+    public User fetchUser() {
         Scanner sc = new Scanner(System.in);
         System.out.println("êtes vous étudiant ? Y/N");
         String choix = sc.nextLine();
@@ -81,23 +85,27 @@ public class ConsoleService {
         return (MusicalEvent) eventList.get(0);
     }
 
-    public HashMap<String, String> parseArgs(String[] args)  {
+    public static HashMap<String, String> parseArgs(String[] args)  {
         HashMap<String, String> argMap = new HashMap<>();
-        String storeKey = null;
 
         if (args.length < 1) {
-            this.printHelp();
+            ConsoleService.printHelp();
             throw new IllegalArgumentException("No argument passed");
         }
 
+        String storeKey = null;
+
         for (String arg : args) {
-            if (arg.charAt(0) == '-') {
+            if (arg.charAt(0) == '-' && storeKey == null) {
                 storeKey = arg.substring(1, args.length);
-            } else if (storeKey != null) {
+                continue;
+            }
+
+            if (storeKey != null) {
                 argMap.put(storeKey, arg);
                 storeKey = null;
             } else {
-                this.printHelp();
+                ConsoleService.printHelp();
                 throw new IllegalArgumentException("Review argument passed");
             }
         }
