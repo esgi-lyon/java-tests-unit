@@ -11,10 +11,9 @@ import javax.swing.*;
 import java.util.List;
 
 public class MusicalEventView {
-    static String[] tableColumn = {"Référence", "Nom", "PrixHT", "PrixTTC", "Quantitée"};
+    static String[] tableColumn = {"Intitule", "Nom", "Prix"};
 
-    public String intitule = "Trotinette";
-    public double basePrice = 2.00;
+    public String intitule = "Concert";
     
     public JComboBox user = new JComboBox();
 

@@ -24,11 +24,13 @@ public class MusicalEvent extends AbstractEntity {
     @OneToOne(mappedBy = "scooter")
     User user;
 
+    public final double basePrice = 100.00;
+
     public MusicalEvent() {}
 
-    public MusicalEvent(String intitule, float prix) {
+    public MusicalEvent(String intitule) {
     	this.intitule = intitule;
-    	this.prix = prix;
+    	this.prix = (float) basePrice;
     	this.status = Status.processing;
     }
 

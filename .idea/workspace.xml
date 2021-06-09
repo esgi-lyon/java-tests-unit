@@ -14,13 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0645f03b-dcd1-493e-9662-677cdafdcc45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/Controller/ScooterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/Controller/MusicalEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/Model/Scooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/MusicalEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/View/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/View/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/View/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/View/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/View/ScooterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/View/MusicalEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/Controller/MusicalEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/Controller/MusicalEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/Model/MusicalEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/Model/MusicalEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/View/MusicalEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/View/MusicalEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/events/cli/Fixtures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/events/cli/Fixtures.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
       <recent name="com.app.Utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -79,11 +78,11 @@
       <recent name="com.app.View" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/app" />
       <recent name="$PROJECT_DIR$/src/main/java/com" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/doc/images" />
       <recent name="$PROJECT_DIR$/doc" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/app/Utils" />
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.package-run">
@@ -110,7 +109,7 @@
       <workItem from="1617957422952" duration="1168000" />
       <workItem from="1617959430295" duration="912000" />
       <workItem from="1623132172293" duration="13546000" />
-      <workItem from="1623179324570" duration="20071000" />
+      <workItem from="1623179324570" duration="21889000" />
     </task>
     <servers />
   </component>
@@ -148,24 +147,29 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="987" y="892" key="#com.intellij.fileTypes.FileTypeChooser/572.1465.1440.817/0.25.2560.1415@0.25.2560.1415" timestamp="1623241517151" />
-    <state x="1093" y="357" key="#com.intellij.ide.util.MemberChooser" timestamp="1623244637853">
+    <state x="1093" y="357" key="#com.intellij.ide.util.MemberChooser" timestamp="1623245281848">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="615" y="216" key="#com.intellij.ide.util.MemberChooser/0.25.1440.815@0.25.1440.815" timestamp="1623193058208" />
-    <state x="1093" y="357" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623244637853" />
+    <state x="1093" y="357" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623245281848" />
     <state x="1093" y="760" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.819/0.25.2560.1415@0.25.2560.1415" timestamp="1623132602980" />
     <state x="1093" y="760" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.820/0.25.2560.1415@0.25.2560.1415" timestamp="1623134629734" />
     <state x="1093" y="760" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.821/0.25.2560.1415@0.25.2560.1415" timestamp="1623142699225" />
     <state x="1093" y="727" key="#com.intellij.ide.util.MemberChooser/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617960077322" />
-    <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623243522901">
+    <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623246941351">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
+    <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/572.1465.1440.813/0.25.2560.1415@0.25.2560.1415" timestamp="1623246941351" />
     <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/572.1465.1440.814/0.25.2560.1415@0.25.2560.1415" timestamp="1623242977578" />
     <state x="933" y="1014" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/572.1465.1440.815/0.25.2560.1415@0.25.2560.1415" timestamp="1623243522901" />
     <state x="1059" y="912" width="441" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617958491528">
       <screen x="0" y="25" width="2560" height="1352" />
     </state>
     <state x="1059" y="912" width="441" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/572.1465.1440.875/0.25.2560.1352@0.25.2560.1352" timestamp="1617958491528" />
+    <state x="1059" y="971" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1623246947232">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="1059" y="971" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/572.1465.1440.813/0.25.2560.1415@0.25.2560.1415" timestamp="1623246947232" />
     <state x="1138" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623244957865">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>

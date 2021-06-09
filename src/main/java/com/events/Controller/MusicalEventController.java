@@ -96,7 +96,7 @@ public class MusicalEventController extends AbstractController {
             try {
                 musicalEventView.serviceAdd.validate();
                 User user = (User) musicalEventView.user.getSelectedItem();
-                MusicalEvent musicalEvent = new MusicalEvent(musicalEventView.intitule, (float) musicalEventView.basePrice);
+                MusicalEvent musicalEvent = new MusicalEvent(musicalEventView.intitule);
                 this.articleEntityManager.persist(musicalEvent);
                 musicalEvent.setUser(user);
                 musicalEventView.serviceAdd.reset(true);
