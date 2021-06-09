@@ -1,7 +1,7 @@
 package com.app.View;
 
 import com.app.View.SwingModules.LabelBuilder;
-import com.app.Services.Fixtures;
+import com.app.Framework.Services.Fixtures;
 import com.app.View.SwingModules.FormBuilder;
 import com.app.View.SwingModules.Theme;
 

@@ -1,7 +1,7 @@
 package com.app.View.SwingModules;
 
-import com.app.Services.IEntity;
-import com.app.Services.Layout;
+import com.app.Framework.Services.IEntity;
+import com.app.Framework.Services.Layout;
 
 import javax.swing.*;
 import javax.swing.event.TableModelListener;

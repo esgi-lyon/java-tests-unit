@@ -3,11 +3,11 @@ package com.app.View;
 import com.app.Controller.UserController;
 import com.app.Exceptions.InternalException;
 import com.app.Exceptions.NotLoadedException;
-import com.app.Services.Fixtures;
-import com.app.Services.Layout;
+import com.app.Framework.Services.Fixtures;
+import com.app.Framework.Services.Layout;
 import com.app.View.SwingModules.Theme;
 import com.sun.tools.javac.Main;
-import com.app.Controller.ServiceController;
+import com.app.Controller.ScooterController;
 import com.app.Framework.Registery;
 
 import javax.swing.*;
@@ -48,7 +48,7 @@ public class MainFrame extends JFrame {
             // Core Framework.Service.Java creation
             this.loadServices();
             // Controllers
-            new ServiceController(registery);
+            new ScooterController(registery);
             new UserController(registery);
 
         } catch (InternalException e) {

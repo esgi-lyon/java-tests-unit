@@ -1,6 +1,6 @@
 package com.app.Model;
 
-import com.app.Services.IEntity;
+import com.app.Framework.Services.IEntity;
 
 import javax.persistence.*;
 
@@ -33,18 +33,6 @@ public abstract class User extends AbstractEntity {
     }
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public Long getId() {
-        return getId();
-    }
-
-    @Override
-    public IEntity setId(Long id) {
-        this.setId(id);
-
-        return this;
     }
 
     public Scooter getService() {

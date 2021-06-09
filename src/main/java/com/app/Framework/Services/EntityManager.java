@@ -1,4 +1,4 @@
-package com.app.Services;
+package com.app.Framework.Services;
 
 import com.app.Exceptions.EntityManagerException;
 import com.app.Framework.Service;

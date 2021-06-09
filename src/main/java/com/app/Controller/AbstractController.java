@@ -2,8 +2,8 @@ package com.app.Controller;
 
 import com.app.Exceptions.RegisteryException;
 import com.app.Framework.Service;
-import com.app.Services.EntityManager;
-import com.app.Services.Layout;
+import com.app.Framework.Services.EntityManager;
+import com.app.Framework.Services.Layout;
 import com.app.View.SwingModules.PageBtn;
 import com.app.Exceptions.FormException;
 import com.app.Exceptions.InternalException;

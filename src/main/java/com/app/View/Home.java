@@ -3,7 +3,7 @@ package com.app.View;
 import javax.swing.*;
 import java.util.HashMap;
 
-import com.app.Controller.ServiceController;
+import com.app.Controller.ScooterController;
 import com.app.Controller.UserController;
 import com.app.View.SwingModules.FormBuilder;
 import com.app.View.SwingModules.PageBtn;
@@ -20,12 +20,14 @@ public class Home extends JPanel {
     // Pages
     public final static String SERVICES_LIST = "Services_list";
     public final static String SERVICES_ADD = "Services_add";
+    public final static String SERVICES_TERMINATE = "Services_terminate";
     public final static String USERS_ADD = "Users_add";
     public final static String USERS_LIST = "Users_list";
 
     public Home() {
-        this.addPageBtn(ServiceController.TITLE_ADD, SERVICES_ADD);
-        this.addPageBtn(ServiceController.TITLE_TRACKING, SERVICES_LIST);
+        this.addPageBtn(ScooterController.TITLE_ADD, SERVICES_ADD);
+        this.addPageBtn(ScooterController.TITLE_TERMINATE, SERVICES_TERMINATE);
+        this.addPageBtn(ScooterController.TITLE_TRACKING, SERVICES_LIST);
         this.addPageBtn(UserController.TITLE_LIST, USERS_LIST);
         this.addPageBtn(UserController.TITLE_ADD, USERS_ADD);
 

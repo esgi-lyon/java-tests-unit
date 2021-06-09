@@ -1,7 +1,7 @@
 package com.app.View.SwingModules;
 
 import com.app.Exceptions.FormException;
-import com.app.Services.Layout;
+import com.app.Framework.Services.Layout;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,6 @@
 package com.app.Model;
 
-import com.app.Services.IEntity;
+import com.app.Framework.Services.IEntity;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 

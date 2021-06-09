@@ -6,8 +6,8 @@ import javax.persistence.*;
 @Table(name = "Service")
 public class Scooter extends AbstractEntity {
 
-    private enum Status {
-        failed, created, processing, done
+    public enum Status {
+        failed, processing, done
     }
 
     @Column(name = "intitule")
@@ -24,10 +24,10 @@ public class Scooter extends AbstractEntity {
 
     public Scooter() {}
 
-    public Scooter(String intitule, float prix, Status status) {
+    public Scooter(String intitule, float prix) {
     	this.intitule = intitule;
     	this.prix = prix;
-    	this.status = status != null ? status : Status.created;
+    	this.status = Status.processing;
     }
 
     public Status getStatus() {

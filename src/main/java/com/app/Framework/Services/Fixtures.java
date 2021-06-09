@@ -1,4 +1,4 @@
-package com.app.Services;
+package com.app.Framework.Services;
 
 import com.app.Exceptions.EntityManagerException;
 import com.app.Framework.Registery;
@@ -76,7 +76,7 @@ public class Fixtures implements com.app.Framework.Service {
     private ArrayList<IEntity> getFakeServices() {
         ArrayList<IEntity> arr = new ArrayList<>();
 
-        Scooter c1 = new Scooter("Trotinette", (float) 1, null);
+        Scooter c1 = new Scooter("Trotinette", (float) 1);
 
         arr.add(c1);
 

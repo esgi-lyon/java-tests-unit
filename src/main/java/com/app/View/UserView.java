@@ -1,7 +1,6 @@
 package com.app.View;
 
-import com.app.Controller.UserController;
-import com.app.Services.Layout;
+import com.app.Framework.Services.Layout;
 import com.app.View.SwingModules.Form;
 import com.app.View.SwingModules.FormBuilder;
 import com.app.View.SwingModules.TableList;
