@@ -1,11 +1,9 @@
 package com.app.View;
 
-import com.framework.SwingModules.LabelBuilder;
-import com.framework.Services.Fixtures;
 import com.framework.SwingModules.FormBuilder;
+import com.framework.SwingModules.LabelBuilder;
 import com.framework.SwingModules.MenuBarInterface;
 import com.framework.SwingModules.Theme;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -20,7 +18,7 @@ public class MenuBar extends JMenuBar implements MenuBarInterface {
 
     JMenuItem jMenuItemQuit = new JMenuItem("Quitter");
     JMenuItem jMenuItemHome = new JMenuItem("Accueil");
-    JMenuItem jMenuItemDemo = new JMenuItem(Fixtures.DEMO_TEXT_ON);
+    // JMenuItem jMenuItemDemo = new JMenuItem(Fixtures.DEMO_TEXT_ON);
     JMenuItem jMenuItemShortcuts = new JMenuItem("Raccourcis");
 
     // help :
@@ -37,7 +35,7 @@ public class MenuBar extends JMenuBar implements MenuBarInterface {
         this.addMenuItem(jMenuFile, jMenuItemHome, "control H");
         jMenuFile.addSeparator();
 
-        this.addMenuItem(jMenuFile, jMenuItemDemo, null);
+        // this.addMenuItem(jMenuFile, jMenuItemDemo, null);
         this.addMenuItem(jMenuFile, jMenuItemQuit, "control Q");
 
         // help :
@@ -61,10 +59,10 @@ public class MenuBar extends JMenuBar implements MenuBarInterface {
         menuItem.setForeground(Color.black);
     }
 
+    @Override
     public void demoOpen(ActionListener listener) {
-        jMenuItemDemo.addActionListener(listener);
+        // jMenuItemDemo.addActionListener(listener);
     }
-
     public void aboutOpen(ActionListener listener) {
         jMenuItemAbout.addActionListener(listener);
     }
@@ -111,12 +109,10 @@ public class MenuBar extends JMenuBar implements MenuBarInterface {
         );
     }
 
-    @Override
     public JMenuItem getjMenuItemQuit() {
         return jMenuItemQuit;
     }
 
-    @Override
     public JMenuItem getjMenuItemHome() {
         return jMenuItemHome;
     }

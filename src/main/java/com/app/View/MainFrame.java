@@ -1,15 +1,13 @@
 package com.app.View;
 
+import com.app.Controller.MusicalEventController;
 import com.app.Controller.UserController;
 import com.framework.Exception.InternalException;
 import com.framework.Exception.NotLoadedException;
-import com.framework.Services.Fixtures;
+import com.framework.Registery;
 import com.framework.Services.Layout;
 import com.framework.SwingModules.Theme;
 import com.sun.tools.javac.Main;
-import com.app.Controller.ScooterController;
-import com.framework.Registery;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -48,7 +46,7 @@ public class MainFrame extends JFrame {
             // Core Framework.Service.Java creation
             this.loadServices();
             // Controllers
-            new ScooterController(registery);
+            new MusicalEventController(registery);
             new UserController(registery);
 
         } catch (InternalException e) {
@@ -82,6 +80,7 @@ public class MainFrame extends JFrame {
     }
 
     protected void createMenu() {
+
         setJMenuBar((JMenuBar) layout.menuBar);
 
         // menu listeners :
@@ -95,7 +94,7 @@ public class MainFrame extends JFrame {
 
         layout.menuBar.demoOpen(e -> {
             if (confirmLoose()) return;
-            this.initFixtures((JMenuItem) e.getSource());
+            // this.initFixtures((JMenuItem) e.getSource());
             layout.openHome();
         });
 
@@ -105,7 +104,7 @@ public class MainFrame extends JFrame {
     }
 
     private void initFixtures(JMenuItem item) {
-         try {
+         /* try {
              if (!registery.has("fixtures")) {
                  registery.add("fixtures", new Fixtures());
              }
@@ -118,7 +117,7 @@ public class MainFrame extends JFrame {
             e.printStackTrace();
          } catch (Exception exception) {
              exception.printStackTrace();
-         }
+         } */
     }
 
     /**

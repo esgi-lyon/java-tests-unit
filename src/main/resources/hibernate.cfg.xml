@@ -17,10 +17,10 @@
 
         <property name="hbm2ddl.auto">update</property>
 
-		<mapping class="com.app.Model.Scooter" />
-		<mapping class="com.app.Model.User" />
 		<mapping class="com.app.Model.ClassicUser" />
+		<mapping class="com.app.Model.User" />
 		<mapping class="com.app.Model.Student" />
+		<mapping class="com.app.Model.MusicalEvent" />
 
 	</session-factory>
 </hibernate-configuration>

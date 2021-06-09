@@ -15,9 +15,9 @@ public abstract class User extends AbstractEntity {
     @Column(name = "name")
     private String name;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private Scooter scooter;
+    private MusicalEvent musicalEvent;
 
     /**
      * Default
@@ -31,17 +31,21 @@ public abstract class User extends AbstractEntity {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public Scooter getService() {
-        return scooter;
+    public MusicalEvent getMusicalEvent() {
+        return musicalEvent;
     }
 
-    public void setService(Scooter scooter) {
-        this.scooter = scooter;
+    public void setService(MusicalEvent musicalEvent) {
+        this.musicalEvent = musicalEvent;
     }
+
+    // Business methods
+    public abstract void buyEventTicket(MusicalEvent event);
 
     /**
      * Java default toString

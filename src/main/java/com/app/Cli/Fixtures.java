@@ -1,8 +1,8 @@
-package com.events.cli;
+package com.app.Cli;
 
-import com.events.Model.ClassicUser;
-import com.events.Model.MusicalEvent;
-import com.events.Model.Student;
+import com.app.Model.ClassicUser;
+import com.app.Model.MusicalEvent;
+import com.app.Model.Student;
 import com.framework.Exception.EntityManagerException;
 import com.framework.Services.EntityManager;
 import com.framework.Services.IEntity;

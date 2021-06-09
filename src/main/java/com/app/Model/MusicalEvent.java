@@ -1,8 +1,11 @@
-package com.events.Model;
+package com.app.Model;
 
 import com.framework.Model.AbstractEntity;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 @Entity
@@ -23,7 +26,7 @@ public class MusicalEvent extends AbstractEntity {
     Status status;
 
     @OneToMany(mappedBy = "musicalEvent")
-    Set<User> users;
+    Set<User> users = new HashSet<>();
 
     public final double basePrice = 100.00;
 

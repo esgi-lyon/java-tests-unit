@@ -1,6 +1,5 @@
-package com.events.View;
+package com.app.View;
 
-import com.framework.Exception.InternalException;
 import com.framework.Services.IEntity;
 import com.framework.Services.Layout;
 import com.framework.SwingModules.Form;

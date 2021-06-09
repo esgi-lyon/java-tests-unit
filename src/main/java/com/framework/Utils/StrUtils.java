@@ -1,4 +1,4 @@
-package com.events.Utils;
+package com.framework.Utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

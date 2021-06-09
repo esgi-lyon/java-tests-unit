@@ -10,7 +10,7 @@
     <name>Java app</name>
 
     <properties>
-        <project.build.mainClass>com.events.cli.CliTests</project.build.mainClass>
+        <project.build.mainClass>com.app.Cli.Main</project.build.mainClass>
         <java.version>13</java.version>
     </properties>
 
@@ -96,19 +96,6 @@
                     <outputDirectory>doc/code</outputDirectory>
                     <reportOutputDirectory>doc/code</reportOutputDirectory>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>default-jar</id>
-                        <phase>none</phase>
-                        <configuration>
-                            <finalName>unwanted</finalName>
-                            <classifier>unwanted</classifier>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>

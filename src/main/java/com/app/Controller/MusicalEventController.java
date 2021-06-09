@@ -1,36 +1,35 @@
 package com.app.Controller;
 
+import com.app.Model.MusicalEvent;
+import com.app.Model.User;
+import com.app.View.Home;
+import com.app.View.MusicalEventView;
+import com.framework.Controller.AbstractController;
 import com.framework.Exception.EntityManagerException;
 import com.framework.Exception.FormException;
 import com.framework.Exception.InternalException;
 import com.framework.Exception.RegisteryException;
-import com.framework.Controller.AbstractController;
 import com.framework.Registery;
-import com.app.Model.Scooter;
-import com.app.Model.User;
 import com.framework.Services.EntityManager;
 import com.framework.Services.IEntity;
 import com.framework.Services.Layout;
-import com.app.View.Home;
-import com.app.View.ScooterView;
+
 import java.util.List;
 
-/**
- * List / READ ONE cars (cars are provided by there builder so search cars in builders)
- */
-public class ScooterController extends AbstractController {
+
+public class MusicalEventController extends AbstractController {
     public final static String TITLE_ADD = "Louer une trottinette";
     public final static String TITLE_TERMINATE = "Terminer ma course";
     public final static String TITLE_TRACKING = "Suivi des location";
 
     private final EntityManager articleEntityManager;
-    private final ScooterView scooterView;
+    private final MusicalEventView musicalEventView;
     protected static String NUMBER_ERROR = "Le format du nombre n'est pas correct";
 
-    public ScooterController(Registery registery) throws InternalException {
+    public MusicalEventController(Registery registery) throws InternalException {
         super(registery);
-        articleEntityManager = this.getEntityManager(Scooter.class);
-        scooterView = new ScooterView(this.getLayout());
+        articleEntityManager = this.getEntityManager(MusicalEvent.class);
+        musicalEventView = new MusicalEventView(this.getLayout());
         actions();
     }
 
@@ -38,11 +37,11 @@ public class ScooterController extends AbstractController {
         Layout ly = this.getLayout();
         // Home access
         ly.home.page(Home.SERVICES_LIST).onOpen(e -> {
-            ly.setPageTitle(ScooterController.TITLE_TRACKING);
-            ly.openPage(scooterView.productTableList, Home.SERVICES_LIST);
+            ly.setPageTitle(MusicalEventController.TITLE_TRACKING);
+            ly.openPage(musicalEventView.productTableList, Home.SERVICES_LIST);
 
             try {
-                scooterView.productTableList.getDetails(this.articleEntityManager.getAll());
+                musicalEventView.productTableList.getDetails(this.articleEntityManager.getAll());
             } catch (EntityManagerException entityManagerProxy) {}
         });
     }
@@ -51,8 +50,8 @@ public class ScooterController extends AbstractController {
         Layout ly = this.getLayout();
         ly.home.page(Home.SERVICES_ADD).onOpen(e -> {
             try {
-                ly.openPage(scooterView.serviceAdd.getPanel(), Home.SERVICES_ADD);
-                scooterView.fillForm(this.getUsers());
+                ly.openPage(musicalEventView.serviceAdd.getPanel(), Home.SERVICES_ADD);
+                musicalEventView.fillForm(this.getUsers());
             } catch (InternalException internalException) {
                 internalException.printStackTrace();
             }
@@ -63,8 +62,8 @@ public class ScooterController extends AbstractController {
         Layout ly = this.getLayout();
         ly.home.page(Home.SERVICES_TERMINATE).onOpen(e -> {
             try {
-                ly.openPage(scooterView.serviceTerminate.getPanel(), Home.SERVICES_TERMINATE);
-                scooterView.fillForm(this.getUsers());
+                ly.openPage(musicalEventView.serviceTerminate.getPanel(), Home.SERVICES_TERMINATE);
+                musicalEventView.fillForm(this.getUsers());
             } catch (InternalException internalException) {
                 internalException.printStackTrace();
             }
@@ -72,43 +71,43 @@ public class ScooterController extends AbstractController {
     }
 
     protected void terminateTravelSubmitAction() {
-        scooterView.serviceTerminate.submit(e -> {
+        musicalEventView.serviceTerminate.submit(e -> {
             try {
-                scooterView.serviceTerminate.validate();
-                User user = (User) scooterView.user.getSelectedItem();
-                Scooter scooter = (Scooter) this.articleEntityManager.getById(user.getService().getId());
-                scooter.setUser(null);
-                scooter.setStatus(Scooter.Status.done);
-                scooterView.serviceAdd.reset(true);
+                musicalEventView.serviceTerminate.validate();
+                User user = (User) musicalEventView.user.getSelectedItem();
+                MusicalEvent musicalEvent = (MusicalEvent) this.articleEntityManager.getById(user.getMusicalEvent().getId());
+                musicalEvent.setUsers(null);
+                musicalEvent.setStatus(MusicalEvent.Status.done);
+                musicalEventView.serviceAdd.reset(true);
             } catch (FormException formException) {
-                scooterView.serviceAdd.errorDialog(formException.getMessage());
+                musicalEventView.serviceAdd.errorDialog(formException.getMessage());
                 return;
             } catch (NumberFormatException numException) {
-                scooterView.serviceAdd.errorDialog(NUMBER_ERROR);
+                musicalEventView.serviceAdd.errorDialog(NUMBER_ERROR);
                 return;
             } catch (EntityManagerException exception) {
-                scooterView.serviceAdd.errorDialog(exception.getMessage());
+                musicalEventView.serviceAdd.errorDialog(exception.getMessage());
             }
         });
     }
 
     protected void startTravelSubmitAction() {
-        scooterView.serviceAdd.submit(e -> {
+        musicalEventView.serviceAdd.submit(e -> {
             try {
-                scooterView.serviceAdd.validate();
-                User user = (User) scooterView.user.getSelectedItem();
-                Scooter scooter = new Scooter(scooterView.intitule, (float) scooterView.prixPerMinutes);
-                this.articleEntityManager.persist(scooter);
-                scooter.setUser(user);
-                scooterView.serviceAdd.reset(true);
+                musicalEventView.serviceAdd.validate();
+                User user = (User) musicalEventView.user.getSelectedItem();
+                MusicalEvent musicalEvent = new MusicalEvent(musicalEventView.intitule);
+                this.articleEntityManager.persist(musicalEvent);
+                musicalEvent.addUser(user);
+                musicalEventView.serviceAdd.reset(true);
             } catch (FormException formException) {
-                scooterView.serviceAdd.errorDialog(formException.getMessage());
+                musicalEventView.serviceAdd.errorDialog(formException.getMessage());
                 return;
             } catch (NumberFormatException numException) {
-                scooterView.serviceAdd.errorDialog(NUMBER_ERROR);
+                musicalEventView.serviceAdd.errorDialog(NUMBER_ERROR);
                 return;
             } catch (EntityManagerException exception) {
-                scooterView.serviceAdd.errorDialog(exception.getMessage());
+                musicalEventView.serviceAdd.errorDialog(exception.getMessage());
             }
         });
     }

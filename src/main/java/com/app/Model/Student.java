@@ -1,5 +1,6 @@
 package com.app.Model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,6 +9,23 @@ import javax.persistence.Table;
 public class Student extends User {
     public Student(String name) {
         super(name);
+    }
+
+    @Column(name = "event_count")
+    int eventCount = 0;
+
+    @Override
+    public void buyEventTicket(MusicalEvent event) {
+        this.eventCount += 1;
+
+        if (eventCount == 20) {
+            event.setPrix(0);
+            eventCount = 0;
+        } else {
+            event.setPrix(event.getPrix() * (float) 0.7);
+        }
+
+        this.setService(event);
     }
 
     public Student() {}

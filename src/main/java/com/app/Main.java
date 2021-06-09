@@ -1,7 +1,8 @@
 package com.app;
 
-import javax.swing.*;
 import com.app.View.MainFrame;
+
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.events.Utils;
+package com.framework.Utils;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
