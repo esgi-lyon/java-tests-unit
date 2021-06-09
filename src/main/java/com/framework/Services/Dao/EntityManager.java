@@ -4,8 +4,11 @@ import com.framework.Exception.EntityManagerException;
 import com.framework.Service;
 import com.framework.Services.IEntity;
 import org.hibernate.Transaction;
+import org.hibernate.Query;
 
+import javax.swing.*;
 import javax.transaction.Transactional;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -143,6 +146,21 @@ public class EntityManager extends Session implements Service {
             obj = session.createQuery(String.format("from %1$s where %2$s=:%2$s", entityClass.getCanonicalName(), field))
                     .setParameter(field, v)
                     .list();
+        } catch (Exception e) {
+            throw new EntityManagerException(e);
+        } finally {
+            close(session);
+        }
+
+        return obj;
+    }
+
+    public final List<IEntity> runGetQuery(String queryClause) throws EntityManagerException {
+        List<IEntity> obj;
+
+        try {
+            session = getSession();
+            obj = session.createQuery(queryClause).list();
         } catch (Exception e) {
             throw new EntityManagerException(e);
         } finally {

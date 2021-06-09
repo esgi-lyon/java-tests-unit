@@ -3,72 +3,84 @@ package com.exam2.Model;
 import com.framework.Model.AbstractEntity;
 
 import javax.persistence.*;
+import java.math.BigInteger;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Hotel")
 public class Hotel extends AbstractEntity {
 
-    public enum Status {
-        failed, planned, processing, done
-    }
+    @Column(name = "name")
+    String name;
 
-    @Column(name = "intitule")
-    String intitule;
+    @Column(name = "phone")
+    String phone;
 
-    @Column(name = "prix")
-    float prix;
+    @Column(name = "address")
+    String address;
 
-    @Enumerated(EnumType.STRING)
-    Status status;
-
-    @ManyToOne(fetch = FetchType.EAGER)
+    @OneToOne(fetch = FetchType.EAGER)
     Director director;
 
-    public final double basePrice = 100.00;
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
+    private Set<Room> rooms = new HashSet<>();
 
     public Hotel() {}
 
-    public Hotel(String intitule) {
-    	this.intitule = intitule;
-    	this.prix = (float) basePrice;
-    	this.status = Status.planned;
+    public Hotel(String name, String phone, String address) {
+    	this.name = name;
+    	this.phone = phone;
+    	this.address = address;
     }
 
-    public Status getStatus() {
-        return status;
+    public String getName() {
+        return name;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setName(String intitule) {
+        this.name = intitule;
     }
 
-    public String getIntitule() {
-        return intitule;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setIntitule(String intitule) {
-        this.intitule = intitule;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public float getPrix() {
-        return prix;
+    public Director getDirector() {
+        return director;
     }
 
-    public void setPrix(float price) {
-        prix = price;
+    public void setDirector(Director director) {
+        this.director = director;
+    }
+
+    public Set<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(Set<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public void addRoom(Room room) {
+        this.rooms.add(room);
     }
 
     @Override
     public String toString() {
-        return getId() + ", " + intitule + ", " + prix;
+        return getId() + ", " + name + ", " + phone;
     }
 
     @Override
     public String toString(boolean list) {
         return
             getId() + ", "
-                + getIntitule() + ", "
-                + getPrix()
+                + getName() + ", "
+                + getPhone()
             ;
     }
 }

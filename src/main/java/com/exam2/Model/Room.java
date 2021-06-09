@@ -8,46 +8,40 @@ import javax.persistence.*;
 @Table(name = "room")
 public class Room extends AbstractEntity {
 
-    public enum Status {
-        free, cleaning, occuped
-    }
+    @Column(name = "number")
+    int number;
 
-    @Column(name = "intitule")
-    String intitule;
+    @Column(name = "floor")
+    int floor;
 
     @Column(name = "prix")
     float prix;
 
-    @Enumerated(EnumType.STRING)
-    Status status;
-
     @ManyToOne(fetch = FetchType.EAGER)
-    Director director;
-
-    public final double basePrice = 100.00;
+    @JoinColumn(name="hotel_id", nullable = false)
+    Hotel hotel;
 
     public Room() {}
 
-    public Room(String intitule) {
-    	this.intitule = intitule;
-    	this.prix = (float) basePrice;
-    	this.status = Status.free;
+    public Room(int intitule, int floor) {
+    	this.number = intitule;
+    	this.floor = floor;
     }
 
-    public Status getStatus() {
-        return status;
+    public Hotel getHotel() {
+        return hotel;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
     }
 
-    public String getIntitule() {
-        return intitule;
+    public int getNumber() {
+        return number;
     }
 
-    public void setIntitule(String intitule) {
-        this.intitule = intitule;
+    public void setNumber(int intitule) {
+        this.number = intitule;
     }
 
     public float getPrix() {
@@ -60,14 +54,13 @@ public class Room extends AbstractEntity {
 
     @Override
     public String toString() {
-        return getId() + ", " + intitule + ", " + prix;
+        return getId() + ", " + prix;
     }
 
     @Override
     public String toString(boolean list) {
         return
             getId() + ", "
-                + getIntitule() + ", "
                 + getPrix()
             ;
     }

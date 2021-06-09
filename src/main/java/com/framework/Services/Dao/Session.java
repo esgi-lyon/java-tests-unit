@@ -37,7 +37,7 @@ public class Session {
         return sessionFactory;
     }
 
-    public static org.hibernate.Session getSession() throws HibernateException {
+    public org.hibernate.Session getSession() throws HibernateException {
         return sessionFactory.openSession();
     }
 

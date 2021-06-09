@@ -18,17 +18,14 @@ public abstract class User extends AbstractEntity {
     @Column(name = "last_name")
     private String lastName;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User managed;
-
     /**
      * Default
      */
     public User() {}
 
-    public User(String name) {
+    public User(String name, String lastName) {
         this.name = name;
+        this.lastName = lastName;
     }
 
     public String getName() {
@@ -37,6 +34,14 @@ public abstract class User extends AbstractEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     /**
