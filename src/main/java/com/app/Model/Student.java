@@ -25,8 +25,8 @@ public class Student extends User {
             event.setPrix(event.getPrix() * (float) 0.7);
         }
 
+        this.setMusicalEvent(event);
         event.addUser(this);
-        this.setService(event);
     }
 
     public Student() {}

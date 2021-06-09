@@ -33,7 +33,7 @@ public class MusicalEvent extends AbstractEntity {
     public MusicalEvent(String intitule) {
     	this.intitule = intitule;
     	this.prix = (float) basePrice;
-    	this.status = Status.processing;
+    	this.status = Status.planned;
     }
 
     public Status getStatus() {
@@ -74,7 +74,7 @@ public class MusicalEvent extends AbstractEntity {
 
     @Override
     public String toString() {
-        return getId() + ", " + intitule;
+        return getId() + ", " + intitule + ", " + prix;
     }
 
     @Override

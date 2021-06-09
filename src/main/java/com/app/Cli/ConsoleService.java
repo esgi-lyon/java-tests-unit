@@ -25,24 +25,26 @@ public class ConsoleService {
 
     public ConsoleService(String[] args) throws EntityManagerException {
         argMap = this.parseArgs(args);
-        this.userName = argMap.get("name");
-        this.eventName = argMap.get("event");
-        System.out.println(this.userName);
+        userName = argMap.get("name");
+        eventName = argMap.get("event");
+        System.out.println("You are : " + userName + " and you want to buy tickets for " + eventName);
         this.userBuyEventAction();
     }
 
     void userBuyEventAction() throws EntityManagerException {
-        final User user = this.fetchUser();
-        final MusicalEvent event = this.fetchEvent();
+        User user = this.fetchUser();
+        MusicalEvent event = this.fetchEvent();
 
         user.buyEventTicket(event);
         this.enEvent.persist(event);
-
+        System.out.println(user.getClass());
         if (user instanceof ClassicUser) {
             this.enClassicUser.persist(user);
         } else if (user instanceof Student) {
             this.enStudent.persist(user);
         }
+        System.out.println(user.toString());
+        System.out.println(event.toString());
 
         System.out.println(
                 String.format(
@@ -56,10 +58,9 @@ public class ConsoleService {
 
     public User fetchUser() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("êtes vous étudiant ? Y/N");
-        String choix = sc.nextLine();
-
-        if (choix == "Y") {
+        String choix = String.format("%s", sc.nextLine());
+        if (choix.matches("[Y-y]")) {
+            System.out.println("You are a student");
             List<IEntity> studentList = this.enStudent.getByField("name", this.userName);
             if (studentList.isEmpty()) {
                 return new Student(this.userName);
@@ -67,6 +68,7 @@ public class ConsoleService {
 
             return (Student) studentList.get(0);
         } else {
+            System.out.println("You are a classic user");
             List<IEntity> classicUserList = this.enClassicUser.getByField("name", this.userName);
             if (classicUserList.isEmpty()) {
                 return new ClassicUser(this.userName);
@@ -79,7 +81,7 @@ public class ConsoleService {
     public MusicalEvent fetchEvent() {
         List<IEntity> eventList = this.enEvent.getByField("intitule", this.userName);
         if (eventList.isEmpty()) {
-            return new MusicalEvent(this.userName);
+            return new MusicalEvent(this.eventName);
         }
 
         return (MusicalEvent) eventList.get(0);
@@ -97,7 +99,7 @@ public class ConsoleService {
 
         for (String arg : args) {
             if (arg.charAt(0) == '-' && storeKey == null) {
-                storeKey = arg.substring(1, args.length);
+                storeKey = arg.substring(1);
                 continue;
             }
 

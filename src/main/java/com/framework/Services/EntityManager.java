@@ -5,6 +5,7 @@ import com.framework.Service;
 import com.framework.Utils.SessionUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * class EntityManagerProxy : Db operations for a specific entity class
  * TODO : create a connectors classes caller to keep this in a state of singleton
+ *
  * @author loic-roux-404
  */
 public class EntityManager extends SessionUtils implements Service {
@@ -98,8 +100,8 @@ public class EntityManager extends SessionUtils implements Service {
     /**
      * [Read method] Get all from entity
      *
-     * @throws EntityManagerException Internal exception
      * @return List of entity concerned by this en manager proxy instance
+     * @throws EntityManagerException Internal exception
      */
     public final List<IEntity> getAll() throws EntityManagerException {
         List<IEntity> entities;
@@ -141,8 +143,10 @@ public class EntityManager extends SessionUtils implements Service {
         try {
             session = getSession();
             obj = session.createQuery(
-                    String.format("from %s where %s=%s", entityClass.getSimpleName(), field, v)
-            ).list();
+                    String.format("from %1$s where %1$s.%2$s=:%2$s", entityClass.getSimpleName(), field)
+            )
+                    .setParameter(":" + field, v)
+                    .list();
         } catch (Exception e) {
             System.out.println(e.getStackTrace());
         }

@@ -13,7 +13,7 @@ public class ClassicUser extends User {
     @Override
     public void buyEventTicket(MusicalEvent event) {
         event.addUser(this);
-        this.setService(event);
+        this.setMusicalEvent(event);
     }
 
     public ClassicUser() {}

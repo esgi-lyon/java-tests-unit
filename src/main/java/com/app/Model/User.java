@@ -40,7 +40,7 @@ public abstract class User extends AbstractEntity {
         return musicalEvent;
     }
 
-    public void setService(MusicalEvent musicalEvent) {
+    public void setMusicalEvent(MusicalEvent musicalEvent) {
         this.musicalEvent = musicalEvent;
     }
 
@@ -53,11 +53,11 @@ public abstract class User extends AbstractEntity {
      */
     @Override
     public String toString() {
-        return this.name;
+        return getId() + ", " + this.name +  ", " + musicalEvent.toString();
     }
 
     @Override
     public String toString(boolean list) {
-        return getId() + ", " + getName();
+        return getId() + ", " + getName() + ", " + musicalEvent.toString();
     }
 }
