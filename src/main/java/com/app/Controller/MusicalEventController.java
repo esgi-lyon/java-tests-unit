@@ -10,7 +10,7 @@ import com.framework.Exception.FormException;
 import com.framework.Exception.InternalException;
 import com.framework.Exception.RegisteryException;
 import com.framework.Registery;
-import com.framework.Services.EntityManager;
+import com.framework.Services.Dao.EntityManager;
 import com.framework.Services.IEntity;
 import com.framework.Services.Layout;
 

@@ -2,7 +2,7 @@ package com.framework.Controller;
 
 import com.framework.Exception.RegisteryException;
 import com.framework.Service;
-import com.framework.Services.EntityManager;
+import com.framework.Services.Dao.EntityManager;
 import com.framework.Services.Layout;
 import com.framework.SwingModules.PageBtn;
 import com.framework.Exception.FormException;

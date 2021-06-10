@@ -1,4 +1,4 @@
-package com.framework.Utils;
+package com.framework.Services.Dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -12,7 +12,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
  * class SessionUtils (used in a DAO system)
  * prepare a persistence session to make transactions in db
  */
-public class SessionUtils {
+public class Session {
     private static SessionFactory sessionFactory;
 
     static {
@@ -38,7 +38,7 @@ public class SessionUtils {
         return sessionFactory;
     }
 
-    public static Session getSession() {
+    public static org.hibernate.Session getSession() throws HibernateException {
         return sessionFactory.openSession();
     }
 
@@ -46,7 +46,7 @@ public class SessionUtils {
      * Important to close persistance session after transaction
      * @param session Session to close
      */
-    public static void close(Session session) {
+    public static void close(org.hibernate.Session session) {
         if (session != null) {
             try {
                 session.close();

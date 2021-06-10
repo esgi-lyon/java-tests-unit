@@ -4,7 +4,7 @@ import com.app.Model.ClassicUser;
 import com.app.Model.MusicalEvent;
 import com.app.Model.Student;
 import com.framework.Exception.EntityManagerException;
-import com.framework.Services.EntityManager;
+import com.framework.Services.Dao.EntityManager;
 import com.framework.Services.IEntity;
 
 import java.util.List;

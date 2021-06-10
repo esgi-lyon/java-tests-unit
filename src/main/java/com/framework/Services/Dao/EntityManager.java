@@ -1,9 +1,8 @@
-package com.framework.Services;
+package com.framework.Services.Dao;
 
 import com.framework.Exception.EntityManagerException;
 import com.framework.Service;
-import com.framework.Utils.SessionUtils;
-import org.hibernate.Session;
+import com.framework.Services.IEntity;
 import org.hibernate.Transaction;
 
 import javax.transaction.Transactional;
@@ -16,12 +15,12 @@ import java.util.List;
  *
  * @author loic-roux-404
  */
-public class EntityManager extends SessionUtils implements Service {
+public class EntityManager extends Session implements Service {
 
     boolean loaded = false;
 
     Class entityClass;
-    Session session;
+    org.hibernate.Session session;
     Transaction tx;
 
     /**
