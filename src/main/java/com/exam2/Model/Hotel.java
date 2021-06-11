@@ -1,14 +1,12 @@
-package com.exam1.Model;
+package com.exam2.Model;
 
 import com.framework.Model.AbstractEntity;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
-@Table(name = "Service")
-public class MusicalEvent extends AbstractEntity {
+@Table(name = "Hotel")
+public class Hotel extends AbstractEntity {
 
     public enum Status {
         failed, planned, processing, done
@@ -23,14 +21,14 @@ public class MusicalEvent extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     Status status;
 
-    @OneToMany(mappedBy = "musicalEvent", fetch = FetchType.EAGER)
-    Set<User> users = new HashSet<>();
+    @ManyToOne(fetch = FetchType.EAGER)
+    Director director;
 
     public final double basePrice = 100.00;
 
-    public MusicalEvent() {}
+    public Hotel() {}
 
-    public MusicalEvent(String intitule) {
+    public Hotel(String intitule) {
     	this.intitule = intitule;
     	this.prix = (float) basePrice;
     	this.status = Status.planned;
@@ -58,18 +56,6 @@ public class MusicalEvent extends AbstractEntity {
 
     public void setPrix(float price) {
         prix = price;
-    }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> user) {
-        this.users = user;
-    }
-
-    public void addUser(User user) {
-        this.users.add(user);
     }
 
     @Override

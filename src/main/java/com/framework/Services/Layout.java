@@ -1,7 +1,6 @@
 package com.framework.Services;
 
 import com.framework.Service;
-import com.exam1.View.Home;
 import com.framework.SwingModules.MenuBarInterface;
 import com.framework.SwingModules.Theme;
 import com.framework.SwingModules.PageBtn;
@@ -21,7 +20,7 @@ public class Layout implements Service {
     private boolean loaded;
     // Main components
     public CardLayout card = new CardLayout();
-    public Home home = new Home();
+    // public Home home = new Home();
     public MenuBarInterface menuBar;
     public JFrame mainFrame;
 
@@ -53,7 +52,7 @@ public class Layout implements Service {
      */
     public void addPage(JPanel jPanel, String name, PageBtn pageBtn) {
         if (null != pageBtn) {
-            home.registerPage(name, pageBtn);
+            // home.registerPage(name, pageBtn);
         }
         if (jPanel == null) {
             return;

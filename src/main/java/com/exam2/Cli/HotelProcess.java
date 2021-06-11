@@ -1,8 +1,9 @@
 package com.exam2.Cli;
 
-import com.exam1.Model.User;
-import com.exam1.Service.MusicalEventService;
-import com.exam1.Service.UserService;
+// import com.exam2.Model.Hotel;
+import com.exam2.Model.User;
+import com.exam2.Service.HotelService;
+import com.exam2.Service.UserService;
 import com.framework.Exception.EntityManagerException;
 import com.framework.Utils.ArgsUtils;
 import com.google.inject.Inject;
@@ -10,45 +11,40 @@ import com.google.inject.Inject;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Process {
+public class HotelProcess {
 
     String userName;
     String eventName;
 
     @Inject
-    MusicalEventService musicalEventService;
+    HotelService hotelService;
 
     @Inject
     UserService userService;
 
-    public Process() {}
+    public HotelProcess() {}
 
     public void process(String[] args) throws EntityManagerException {
         parseArgMap(args);
         System.out.println("You are : " + userName + " and you want to buy tickets for " + eventName);
 
         User user = this.scanUser();
-        user = musicalEventService.buyEventForUser(user, musicalEventService.getOrCreateNotPersisted(eventName));
-
+        // user = hotelService.buyEventForUser(user, hotelService.getOrCreateNotPersisted(eventName));
+/*
         System.out.println(
                 String.format(
-                        "Successfully added event %s to user %s for the price of %s",
-                        user.getMusicalEvent().getIntitule(),
-                        user.getName(),
-                        user.getMusicalEvent().getPrix()
+                        "Employee with the best salary of %s is %s",
+                        employee
                 )
-        );
+        ); */
     }
 
     public User scanUser() throws EntityManagerException {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Are you a student ? Y/N");
-        String choix = String.format("%s", sc.nextLine());
-        if (choix.matches("[Y-y]")) {
-            return userService.getOrCreateStudentNotPersisted(userName);
-        } else {
-            return userService.getOrCreateClassicUserNotPersisted(userName);
-        }
+        System.out.println("Question ? Y/N");
+        String choice = String.format("%s", sc.nextLine());
+
+        return null;
     }
 
     public void parseArgMap(String[] args) {

@@ -1,6 +1,6 @@
 package com.exam2.Modules;
 
-import com.exam1.Cli.BuyEventProcess;
+import com.exam2.Cli.HotelProcess;
 import com.google.inject.AbstractModule;
 
 /**
@@ -9,8 +9,6 @@ import com.google.inject.AbstractModule;
 public class CoreModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(BuyEventProcess.class);
-        // TODO refacto UI
-        // bind(MainFrame.class);
+        bind(HotelProcess.class);
     }
 }

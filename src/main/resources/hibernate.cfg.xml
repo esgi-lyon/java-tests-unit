@@ -6,7 +6,7 @@
 	<session-factory>
         <property name="hibernate.connection.driver_class">org.h2.Driver</property>
         <property name="hibernate.connection.url">jdbc:h2:./default;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0</property>
-        <property name="hibernate.connection.username">user</property>
+        <property name="hibernate.connection.username">musicalEvent</property>
         <property name="connection.password">pass</property>
         <property name="connection.pool_size">1</property>
         <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
@@ -17,10 +17,11 @@
 
         <property name="hbm2ddl.auto">update</property>
 
-		<mapping class="com.exam1.Model.ClassicUser" />
-		<mapping class="com.exam1.Model.User" />
-		<mapping class="com.exam1.Model.Student" />
-		<mapping class="com.exam1.Model.MusicalEvent" />
+		<mapping class="com.exam2.Model.Director" />
+		<mapping class="com.exam2.Model.User" />
+		<mapping class="com.exam2.Model.Hotel" />
+		<mapping class="com.exam2.Model.Room" />
+		<mapping class="com.exam2.Model.Employee" />
 
 	</session-factory>
 </hibernate-configuration>

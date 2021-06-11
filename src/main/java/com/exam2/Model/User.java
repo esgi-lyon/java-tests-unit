@@ -1,6 +1,5 @@
 package com.exam2.Model;
 
-import com.exam1.Model.MusicalEvent;
 import com.framework.Model.AbstractEntity;
 
 import javax.persistence.*;
@@ -16,9 +15,12 @@ public abstract class User extends AbstractEntity {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "last_name")
+    private String lastName;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private MusicalEvent musicalEvent;
+    private User managed;
 
     /**
      * Default
@@ -37,28 +39,17 @@ public abstract class User extends AbstractEntity {
         this.name = name;
     }
 
-    public MusicalEvent getMusicalEvent() {
-        return musicalEvent;
-    }
-
-    public void setMusicalEvent(MusicalEvent musicalEvent) {
-        this.musicalEvent = musicalEvent;
-    }
-
-    // Business methods
-    public abstract void businessMethod(MusicalEvent event);
-
     /**
      * Java default toString
      * @return string
      */
     @Override
     public String toString() {
-        return getId() + ", " + this.name +  ", " + musicalEvent.toString();
+        return getId() + ", " + this.name;
     }
 
     @Override
     public String toString(boolean list) {
-        return getId() + ", " + getName() + ", " + musicalEvent.toString();
+        return getId() + ", " + getName();
     }
 }
