@@ -6,7 +6,6 @@ import com.framework.Services.IEntity;
 import org.hibernate.Transaction;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -129,23 +128,25 @@ public class EntityManager extends Session implements Service {
             obj = session.load(entityClass, id);
         } catch (Exception e) {
             throw new EntityManagerException(e);
+        } finally {
+            close(session);
         }
 
         return (IEntity) obj;
     }
 
-    public final List<IEntity> getByField(String field, String v) {
-        List<IEntity> obj = new ArrayList<>();
+    public final List<IEntity> getByField(String field, String v) throws EntityManagerException {
+        List<IEntity> obj;
 
         try {
             session = getSession();
-            obj = session.createQuery(
-                    String.format("from %1$s where %1$s.%2$s=:%2$s", entityClass.getSimpleName(), field)
-            )
-                    .setParameter(":" + field, v)
+            obj = session.createQuery(String.format("from %1$s where %2$s=:%2$s", entityClass.getCanonicalName(), field))
+                    .setParameter(field, v)
                     .list();
         } catch (Exception e) {
-            System.out.println(e.getStackTrace());
+            throw new EntityManagerException(e);
+        } finally {
+            close(session);
         }
 
         return obj;

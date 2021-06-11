@@ -7,6 +7,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "student")
 public class Student extends User {
+    public Student() {}
+
     public Student(String name) {
         super(name);
     }
@@ -29,5 +31,4 @@ public class Student extends User {
         event.addUser(this);
     }
 
-    public Student() {}
 }

@@ -17,8 +17,4 @@ public class ClassicUser extends User {
     }
 
     public ClassicUser() {}
-
-    public void buyEventTicket() {
-        this.getMusicalEvent().addUser(this);
-    }
 }

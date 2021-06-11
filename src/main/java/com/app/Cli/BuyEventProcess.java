@@ -40,7 +40,7 @@ public class BuyEventProcess {
         );
     }
 
-    public User scanUser() {
+    public User scanUser() throws EntityManagerException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Are you a student ? Y/N");
         String choix = String.format("%s", sc.nextLine());

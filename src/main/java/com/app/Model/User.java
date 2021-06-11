@@ -15,7 +15,7 @@ public abstract class User extends AbstractEntity {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private MusicalEvent musicalEvent;
 

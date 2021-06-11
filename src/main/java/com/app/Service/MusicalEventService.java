@@ -14,11 +14,11 @@ public class MusicalEventService {
     private EntityManager entityManager;
 
     @Inject
-    public MusicalEventService(EntityManagerFactory entityManager) {
-        this.entityManager = entityManager.get(MusicalEvent.class);
+    public MusicalEventService(EntityManagerFactory entityManagerFactory) {
+        entityManager = entityManagerFactory.get(MusicalEvent.class);
     }
 
-    public MusicalEvent getOrCreateNotPersisted(String name) {
+    public MusicalEvent getOrCreateNotPersisted(String name) throws EntityManagerException {
         List<IEntity> eventList = this.entityManager.getByField("intitule", name);
         if (eventList.isEmpty()) {
             return new MusicalEvent(name);
@@ -29,8 +29,8 @@ public class MusicalEventService {
 
     public User buyEventForUser(User user, MusicalEvent event) throws EntityManagerException {
         user.buyEventTicket(event);
-        this.entityManager.persist(event);
-        this.entityManager.persist(user); // Any entity manager can persist other entities
+        entityManager.persist(event);
+        entityManager.persist(user); // Any entity manager can persist other entities
 
         return user;
     }

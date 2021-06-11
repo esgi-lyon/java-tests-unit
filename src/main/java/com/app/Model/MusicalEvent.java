@@ -23,7 +23,7 @@ public class MusicalEvent extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     Status status;
 
-    @OneToMany(mappedBy = "musicalEvent")
+    @OneToMany(mappedBy = "musicalEvent", fetch = FetchType.EAGER)
     Set<User> users = new HashSet<>();
 
     public final double basePrice = 100.00;

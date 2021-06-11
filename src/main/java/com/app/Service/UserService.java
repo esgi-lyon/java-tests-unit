@@ -1,7 +1,6 @@
 package com.app.Service;
 
 import com.app.Model.ClassicUser;
-import com.app.Model.MusicalEvent;
 import com.app.Model.Student;
 import com.app.Model.User;
 import com.framework.Exception.EntityManagerException;
@@ -20,11 +19,7 @@ public class UserService {
         entityManager = entityManagerFactory.get(User.class);
     }
 
-    public void persistUser(User user) throws EntityManagerException {
-        entityManager.persist(user);
-    }
-
-    public User getOrCreateStudentNotPersisted(String name) {
+    public User getOrCreateStudentNotPersisted(String name) throws EntityManagerException {
         List<IEntity> students = this.entityManager.getByField("name", name);
         if (students.isEmpty()) {
             return new Student(name);
@@ -33,10 +28,10 @@ public class UserService {
         return (Student) students.get(0);
     }
 
-    public User getOrCreateClassicUserNotPersisted(String name) {
+    public User getOrCreateClassicUserNotPersisted(String name) throws EntityManagerException {
         List<IEntity> classicUsers = this.entityManager.getByField("name", name);
         if (classicUsers.isEmpty()) {
-            return new Student(name);
+            return new ClassicUser(name);
         }
 
         return (ClassicUser) classicUsers.get(0);
