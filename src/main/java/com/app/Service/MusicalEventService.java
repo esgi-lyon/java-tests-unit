@@ -30,6 +30,7 @@ public class MusicalEventService {
     public User buyEventForUser(User user, MusicalEvent event) throws EntityManagerException {
         user.buyEventTicket(event);
         this.entityManager.persist(event);
+        this.entityManager.persist(user); // Any entity manager can persist other entities
 
         return user;
     }

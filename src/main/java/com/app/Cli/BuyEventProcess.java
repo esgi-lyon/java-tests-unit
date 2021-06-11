@@ -29,7 +29,6 @@ public class BuyEventProcess {
 
         User user = this.scanUser();
         user = musicalEventService.buyEventForUser(user, musicalEventService.getOrCreateNotPersisted(eventName));
-        userService.persistUser(user);
 
         System.out.println(
                 String.format(
