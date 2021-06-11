@@ -55,6 +55,7 @@ public class MainFrame extends JFrame {
     }
 
     protected void loadServices() throws NotLoadedException {
+        // TODO use google juice
         registery = new Registery(null);
         registery.add(Layout.NAME, layout);
     }

@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Registery {
 
-    public HashMap<String, Service> services = new HashMap<>();
+    public HashMap<String, Service> services;
 
     public Registery(HashMap<String, Service> services) {
         this.services = services != null ? services : new HashMap<>();
@@ -15,7 +15,7 @@ public class Registery {
 
     public Registery add(String name, Service service) throws NotLoadedException {
 
-        if (!service.isLoaded()) {
+        if (service == null) {
             throw new NotLoadedException(name);
         }
 

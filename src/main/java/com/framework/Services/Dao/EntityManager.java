@@ -12,8 +12,6 @@ import java.util.List;
 /**
  * class EntityManagerProxy : Db operations for a specific entity class
  * TODO : create a connectors classes caller to keep this in a state of singleton
- *
- * @author loic-roux-404
  */
 public class EntityManager extends Session implements Service {
 

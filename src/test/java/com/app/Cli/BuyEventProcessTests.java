@@ -1,6 +1,5 @@
 package com.app.Cli;
 
-import com.framework.Exception.EntityManagerException;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,15 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.HashMap;
 
-public class ConsoleServiceTests {
+public class BuyEventProcessTests {
 
     @Test
     public void parseArgs() {
-        HashMap<String, String> map = ConsoleService.parseArgs(ConsoleServiceTests.getArgs());
+        HashMap<String, String> map = BuyEventProcess.parseArgs(BuyEventProcessTests.getArgs());
         assertEquals("Soenda festival", map.get("event"));
         assertEquals("Loic", map.get("name"));
         // Empty args
-        assertThrows(IllegalArgumentException.class, () -> { ConsoleService.parseArgs(new String[]{}); });
+        assertThrows(IllegalArgumentException.class, () -> { BuyEventProcess.parseArgs(new String[]{}); });
     };
 
     protected static String[] getArgs(){
